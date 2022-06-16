@@ -1,0 +1,246 @@
+CRITICAL - 2022-06-16 01:52:19 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 0, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(289): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 01:55:08 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 0, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(289): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 01:56:08 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 0, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(289): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 01:56:48 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 0, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(289): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 01:56:50 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 0, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(289): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 01:58:37 --> Undefined variable: status
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\addNewBrand.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 8, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(305): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-16 02:00:14 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 1, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(288): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-16 02:01:07 --> Call to undefined method App\Models\Brand_Access::updateDataofBrandbyData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): CodeIgniter\Model->__call('updateDataofBra...', Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(311): App\Controllers\BackEndController->setBrandviaData(Array, 1, Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(288): App\Controllers\BackEndController->changingBrandDetails(Array, Array)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-06-16 02:46:22 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+CRITICAL - 2022-06-16 02:46:22 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(126): App\Models\Brand_Access->insertDatatoBrand_Access(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(282): App\Controllers\BackEndController->brandAccessCreation(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-16 02:46:42 --> Undefined variable: brandData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(236): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 236, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->modifyBrand('6')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-16 02:46:48 --> Undefined variable: brandData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(236): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 236, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->modifyBrand('6')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-16 02:47:17 --> Undefined variable: brandData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(236): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 236, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->modifyBrand('6')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-16 02:47:22 --> Undefined variable: brandData
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(236): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 236, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->modifyBrand('6')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-16 02:48:36 --> Undefined variable: sellertoo
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\addNewBrand.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(254): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->modifyBrand('6')
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-06-16 02:56:29 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+CRITICAL - 2022-06-16 02:56:29 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(126): App\Models\Brand_Access->insertDatatoBrand_Access(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(284): App\Controllers\BackEndController->brandAccessCreation(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-06-16 03:04:09 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+CRITICAL - 2022-06-16 03:04:09 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(126): App\Models\Brand_Access->insertDatatoBrand_Access(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(285): App\Controllers\BackEndController->brandAccessCreation(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-16 03:17:08 --> Undefined index: OwnerID
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(310): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 310, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(285): App\Controllers\BackEndController->activate_createBrandAccess(Array)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-06-16 03:18:34 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+CRITICAL - 2022-06-16 03:18:34 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(126): App\Models\Brand_Access->insertDatatoBrand_Access(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(316): App\Controllers\BackEndController->brandAccessCreation(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(285): App\Controllers\BackEndController->activate_createBrandAccess(Array)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-06-16 03:20:18 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+CRITICAL - 2022-06-16 03:20:18 --> Duplicate entry '6-4' for key 'BrandID_CorparationID'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(82): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(126): App\Models\Brand_Access->insertDatatoBrand_Access(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(316): App\Controllers\BackEndController->brandAccessCreation(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(285): App\Controllers\BackEndController->activate_createBrandAccess(Array)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->editBrand()
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-16 12:47:47 --> Undefined index: requested
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(160): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 160, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(115): App\Controllers\BackEndController->brandDetails('10')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->moreBrandDetails('10')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-16 12:52:41 --> Undefined index: requested
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 136, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(115): App\Controllers\BackEndController->brandDetails('10')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->moreBrandDetails('10')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-16 12:52:48 --> Undefined index: requested
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 136, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(115): App\Controllers\BackEndController->brandDetails('10')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->moreBrandDetails('10')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-16 13:02:56 --> Undefined variable: value
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\brandInformation.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 97, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(119): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->moreBrandDetails('10')
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-16 13:03:20 --> Class 'App\Controllers\Genre' not found
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\GoodsAccessor.php(30): App\Controllers\GoodsController->genreDetails()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\GoodsAccessor->mainView()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoodsAccessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-16 13:03:38 --> Undefined variable: value
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\brandInformation.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 97, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(119): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->moreBrandDetails('10')
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -1,0 +1,71 @@
+CRITICAL - 2022-05-14 15:42:31 --> Undefined variable: data
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\InitMenu.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\InitMenu->index()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InitMenu))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-14 15:42:32 --> Undefined variable: data
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\InitMenu.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\InitMenu->index()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InitMenu))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-14 15:43:16 --> Undefined variable: data
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\Items\ItemMenuScreen.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('Items/ItemMenuS...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\InitMenu.php(10): view('Items/ItemMenuS...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\InitMenu->index()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InitMenu))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-14 15:43:28 --> Undefined variable: data
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\Items\ItemMenuScreen.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('Items/ItemMenuS...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\InitMenu.php(10): view('Items/ItemMenuS...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\InitMenu->index()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InitMenu))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-14 15:43:34 --> Undefined variable: data
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\Items\ItemMenuScreen.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 5, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('Items/ItemMenuS...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\InitMenu.php(10): view('Items/ItemMenuS...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\InitMenu->index()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InitMenu))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-14 16:06:30 --> Call to undefined function App\Controllers\goods()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\MenuController->index()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-14 16:06:48 --> Call to undefined function App\Controllers\goods()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\MenuController->index()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-14 16:06:49 --> Call to undefined function App\Controllers\goods()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\MenuController->index()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-14 16:07:53 --> Call to undefined function App\Controllers\goods()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\MenuController->index()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -1,0 +1,7 @@
+CRITICAL - 2022-04-21 11:07:48 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\CodeIgniter4\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CodeIgniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

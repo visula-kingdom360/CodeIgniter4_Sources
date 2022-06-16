@@ -1,0 +1,19 @@
+CRITICAL - 2022-04-22 05:10:00 --> Undefined property: App\Controllers\Home::$load
+#0 C:\xampp\htdocs\CodeIgniter4\app\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CodeIgniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-22 10:28:59 --> Undefined variable: tish
+#0 C:\xampp\htdocs\CodeIgniter4\app\Views\layouts\default.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\CodeIgniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\CodeIgniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\CodeIgniter4\system\View\View.php(226): CodeIgniter\View\View->render('layouts/default', Array, true)
+#4 C:\xampp\htdocs\CodeIgniter4\system\Common.php(1089): CodeIgniter\View\View->render('Home/index', Array, true)
+#5 C:\xampp\htdocs\CodeIgniter4\app\Controllers\Home.php(16): view('Home/index')
+#6 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CodeIgniter4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CodeIgniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}

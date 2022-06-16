@@ -1,0 +1,96 @@
+.company-details{
+    border: 2px solid black;
+    background-color: #ceceff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company-details .company-logo img{
+    width: 100%;
+    height: 200px;
+}
+
+.company-details .company-title h1{
+    text-align: center;
+}
+
+.company-details .brand-details{
+    border: 2px solid black;
+    border-radius: 25px;
+    /* margin-left: 2px; */
+    /* height: 300px; */
+    overflow: hidden;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.company-details .brand-details .brand-info{
+    max-height: 300px;
+    /* width: 100%; */
+    overflow-wrap: break-word;
+}
+
+.company-details .brand-details div{
+    display: inline-block;
+}
+
+.company-details .brand-details .brand-info h2 span{
+    /* text-align: center; */
+    /* font-weight: 100; */
+    font-size: small;
+    color: grey;
+    /* display: inline-block; */
+}
+
+a{
+    text-decoration: none;
+}
+
+.company-details .brand-details .equipment-list img, .company-details .brand-details .equipment-list .equipment-info{
+    /* text-decoration: none; */
+    width: 250px;
+    height: 250px;
+}
+
+.company-details .brand-details .equipment-list .equipment-info{
+    border: 2px solid black;
+    /* width: 250px;
+    height: 250px; */
+    border-radius: 100%;
+    overflow: hidden;
+    text-align: center;
+    /* object-fit: cover; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.company-details .brand-details .equipment-list .equipment-info .card-info{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.company-details .brand-details .equipment-list .equipment-info .card-info h4{
+    font-size: 15px;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.company-details .brand-details .equipment-list .equipment-info .card-info p{
+    font-size: 10px;
+    overflow-wrap: break-word;
+    margin: 0%;
+    /* word-spacing: 2px; */
+}
+
+.company-details .brand-details .equipment-list .equipment-info .card-info .offer-banner{
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    width: 100%;
+    background-color: aqua;
+    color: #000;
+
+}

@@ -1,0 +1,36 @@
+.user-access .about-us h1,
+.user-access .about-us h5{
+    line-height:1.4em;
+    text-align:center;
+}
+
+.user-access .toast{
+    width: 100%;
+}
+
+.user-access .toast .toast-header{
+    color: red;
+    font-size: 25px;
+    /* box-shadow: 2px 2px 5px lightgrey; */
+    box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+}
+
+.user-access .about-us h1{
+    font-size:42px;
+}
+
+.user-access .about-us h5{
+    font-size:18px;
+}
+
+.user-access .about-us span{
+    letter-spacing:0.1em;
+}
+
+.user-access .about-us{
+    border-right: 2px solid black;
+}
+
+.user-access .login-segment{
+    border-left: 2px solid black;
+}
