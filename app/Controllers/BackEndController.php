@@ -264,7 +264,7 @@ class BackEndController extends AccessController
         return $tooltips;
     }
 
-    # Company Name 
+    # Return Company Name my sending Company ID
     public function companyName($corparateID)
     {
         $companyDetails = $this->getCorparationDataviaCorpID($corparateID);
@@ -272,7 +272,7 @@ class BackEndController extends AccessController
         return $companyDetails[0]['Name'];
     }
 
-    # Validate the Brand 
+    # Compare Brand Details with the Datapassed
     public function validateChangesBrand($brandData)
     {
         $changes = [];
@@ -293,6 +293,7 @@ class BackEndController extends AccessController
         return $changes;
     }
 
+    # Brand Access Statistics
     public function brandSellsStatic($brandID, $corpID)
     {
         $brand_access = $this->getBrand_AccessDataviaBrandIDCorpID($brandID, $corpID);
@@ -310,6 +311,7 @@ class BackEndController extends AccessController
         }
     }
 
+    # Changing brand details Dynimally
     public function changingBrandDetails($changes, $brandData)
     {
         $brand = $this->setBrandviaData($changes, count($changes), $brandData);
@@ -317,6 +319,7 @@ class BackEndController extends AccessController
         return isset($brand);
     }
 
+    # Active or Create the Brand Access
     public function activate_createBrandAccess($brand_access)
     {
         #CHECK HEREEq
@@ -333,6 +336,7 @@ class BackEndController extends AccessController
             return 'Created';
         }
     }
+
     // public function validateBrandAccess()
     // {
 

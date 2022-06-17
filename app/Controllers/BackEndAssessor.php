@@ -82,7 +82,7 @@ class BackEndAssessor extends BackEndController
         $data['company_brands'] = $this->companyBrandDetails($_SESSION["CorpID"]);
         $data['active_equipment_true'] = 'Cannot Expire while active Equipment are available.';
 
-        return view('SupplierPlateform/brandManager',$data);
+        return view('SupplierPlateform/Brand-Management/brandManager',$data);
     }
 
     # Company Owned Brands
@@ -97,7 +97,7 @@ class BackEndAssessor extends BackEndController
         $data['owned_brands'] = $this->ownedBrandDetails($_SESSION["CorpID"]);
         $data['tool_tips'] = $this->tooltipsforBrandAccess();
 
-        return view('SupplierPlateform/companyBrands',$data);
+        return view('SupplierPlateform/Brand-Management/companyBrands',$data);
     }
 
     // # Brand Details
@@ -116,7 +116,7 @@ class BackEndAssessor extends BackEndController
         // var_dump($data);
         // die;
         // echo $brandID;
-        return view('SupplierPlateform/brandInformation',$data);
+        return view('SupplierPlateform/Brand-Management/brandInformation',$data);
         
     }
 
@@ -152,7 +152,7 @@ class BackEndAssessor extends BackEndController
             'status' => '',
         ];
 
-        return view('SupplierPlateform/addNewBrand',$data);
+        return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
     }
 
     # Creating a new Brand
@@ -200,7 +200,7 @@ class BackEndAssessor extends BackEndController
             ];
     
             #If Brand Name already existing return Error
-            return view('SupplierPlateform/addNewBrand',$data);
+            return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
         }
 
         #calling to create a Brand
@@ -253,7 +253,7 @@ class BackEndAssessor extends BackEndController
             'sellertoo' => $sellertoo,
         ];
 
-        return view('SupplierPlateform/addNewBrand',$data);
+        return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
     }
 
     public function editBrand()
@@ -319,12 +319,12 @@ class BackEndAssessor extends BackEndController
                 'sellertoo' => $sellertoo,
             ];
     
-            return view('SupplierPlateform/addNewBrand',$data);
+            return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
         }
             
         return redirect()->to(base_url('company-brands'));
             
-        // return view('SupplierPlateform/addNewBrand',$data);
+        // return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
 
         #returning Data if modification was not approved
         // $data = [
@@ -336,7 +336,7 @@ class BackEndAssessor extends BackEndController
         //     'url' => 'brand-editing', 
         // ];
 
-        // return view('SupplierPlateform/addNewBrand',$data);
+        // return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
 
         // $brand_access = $this->brand_accessDetail($brandData['brandacessid']);
 
