@@ -6,43 +6,6 @@ class BackEndController extends AccessController
     use Traits\DB\BrandTrait;
     use Traits\DB\EquipmentTrait;
 
-    // public function getBrand_AccessDatafromCorpationID($corparationID) #getBrand_AccessDatafromCorpationID
-    // {
-    //     $brand_access = [];
-
-    //     $brand_accessModule = new Brand_Access();
-    //     $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyCorpID($corparationID);
-
-    //     foreach ($brand_accessDBData as $row => $feilds) {
-    //         # Brand Access data from DB directly
-    //         $brand_access[$row]['PK'] = $this->autoFeildBreakup($brand_accessModule->primaryKey, $feilds);
-    //         $brand_access[$row]['SK'] = $this->autoFeildBreakup($brand_accessModule->allowedFields, $feilds);
-    //         $brand_access[$row]['SK']['IsOwner'] = false;
-
-    //         if($brand_access[$row]['SK']['CorparationID'] == $brand_access[$row]['SK']['OwnerID']){
-    //             $brand_access[$row]['SK']['IsOwner'] = true;
-    //         }
-    //     }
-            
-    //     return  $brand_access;
-    // }
-
-    // public function getBrandDatafromOwnerID($ownerID)
-    // {
-    //     $brand = [];
-
-    //     $brandModule = new Brand();
-    //     $brandDBData = $brandModule->selectBrandbyOwnerID($ownerID);
-
-    //     foreach ($brandDBData as $row => $feilds) {
-    //         # Brand data from DB directly
-    //         $brand[$row]['PK'] = $this->autoFeildBreakup($brandModule->primaryKey, $feilds);
-    //         $brand[$row]['SK'] = $this->autoFeildBreakup($brandModule->allowedFields, $feilds);
-    //     }
-
-    //     return $brand;
-    // }
-
     #Companies Brands Using and owned information base
     public function companyBrandDetails($corparationID) # Gather Details
     {
@@ -93,16 +56,9 @@ class BackEndController extends AccessController
             $owned_brands[$row_1_key]['Request_Count']  = $relationships['requested'];
             $owned_brands[$row_1_key]['Rejected_Count'] = $relationships['rejected'];
             $owned_brands[$row_1_key]['Accepted_Count'] = $relationships['validated'];
-
-            // $brand_info = [];
-
         }
 
-        // var_dump($owned_brands);
-        // die;
-
         return $owned_brands;
-
     }
 
     public function brandDetails($brandID) # Gather Details
@@ -120,7 +76,6 @@ class BackEndController extends AccessController
             if(isset($relationships['requested'][0])){
                 foreach($relationships['requested'] as $row_2_key => $row_2_value) {
                     # Brand Access ID value
-                    // $brand_access['requested'][$row_2_key]['BrandID'] = $row_2_value['BrandID'];
                     $brand_access['requested'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
                     
                     # Company Name for the brand access
@@ -136,7 +91,6 @@ class BackEndController extends AccessController
             if(isset($relationships['rejected'][0])){
                 foreach($relationships['rejected'] as $row_2_key => $row_2_value) {
                     # Brand Access details
-                    // $brand_access['rejected'][$row_2_key]['BrandID'] = $row_2_value['BrandID'];
                     $brand_access['rejected'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
                     
                     # Company Name for the brand access
@@ -152,7 +106,6 @@ class BackEndController extends AccessController
             if(isset($relationships['validated'][0])){
                 foreach($relationships['validated'] as $row_2_key => $row_2_value) {
                     # Brand Access details
-                    // $brand_access['validated'][$row_2_key]['BrandID'] = $row_2_value['BrandID'];
                     $brand_access['validated'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
                     
                     # Company Name for the brand access
@@ -322,11 +275,8 @@ class BackEndController extends AccessController
     # Active or Create the Brand Access
     public function activate_createBrandAccess($brand_access)
     {
-        #CHECK HEREEq
+        # Validate if inactive Brand Accessors are available
         $brand_access_avail = $this->getBrand_AccessDataviaBrandIDCorpID($brand_access['BrandID'], $brand_access['CorparationID'],'A');
-
-        var_dump($brand_access_avail);
-        die;
 
         if(isset($brand_access_avail[0])){
             $this->setBrand_AccessStatusviaBrandID($brand_access_avail[0]['Brand_AccessID'], 'A');
@@ -337,97 +287,5 @@ class BackEndController extends AccessController
         }
     }
 
-    // public function validateBrandAccess()
-    // {
-
-    // }
-    // public function getBrandDatafromBrandName($brandName)
-    // {
-    //     $brand = [];
-    //     $brandModule = new Brand();
-    //     $brandDBData = $brandModule->selectBrandbyName($brandName);
-
-    //     if(isset($brandDBData[0]))
-    //     {
-    //         # Brand data from DB directly
-    //         $brand[0]['PK'] = $this->autoFeildBreakup($brandModule->primaryKey, $brandDBData[0]);
-    //         $brand[0]['SK'] = $this->autoFeildBreakup($brandModule->allowedFields, $brandDBData[0]);
-
-    //         return $brand;
-    //     }else
-    //     {
-    //         return '';
-    //     }
-    // }
-
-    // public function addBrandData($brand)
-    // {
-    //     $brandModule = new Brand();
-    //     return $brandModule->inserDatatoBrand($brand);
-    // }
-
-    // public function brandAccessCreation($brand_access)
-    // {
-    //     $brand_accessModule = new Brand_Access();
-    //     return $brand_accessModule->insertDatatoBrand_Access($brand_access);
-    // }
-
-    // public function getBrandDataviaID($brandID) #getBrandDataviaID
-    // {
-    //     $brand = [];
-    //     $brandModule = new Brand();
-    //     $brandDBData = $brandModule->selectBrandbyID($brandID);
-
-    //     if(isset($brandDBData[0]))
-    //     {
-    //         # Brand data from DB directly
-    //         $brand[0]['PK'] = $this->autoFeildBreakup($brandModule->primaryKey, $brandDBData[0]);
-    //         $brand[0]['SK'] = $this->autoFeildBreakup($brandModule->allowedFields, $brandDBData[0]);
-
-    //         return $brand;
-    //     }else
-    //     {
-    //         return '';
-    //     }
-    // }
-
-    // public function brand_accessDetail($brand_accessID)
-    // {
-    //     $brand_access = [];
-    //     $brand_accessModule = new Brand_Access();
-    //     $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyID($brand_accessID);
-
-    //     if(isset($brand_accessDBData[0]))
-    //     {
-    //         # Brand data from DB directly
-    //         $brand_access[0]['PK'] = $this->autoFeildBreakup($brand_accessModule->primaryKey, $brand_accessDBData[0]);
-    //         $brand_access[0]['SK'] = $this->autoFeildBreakup($brand_accessModule->allowedFields, $brand_accessDBData[0]);
-
-    //         return $brand_access;
-    //     }else
-    //     {
-    //         return '';
-    //     }
-    // }
-
-    // public function getBrand_AccessDataviaBrandIDCorpID($brandID, $corparationID)
-    // {
-    //     // $brand_access = [];
-
-    //     // $brand_accessModule = new Brand_Access();
-    //     // $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyBrandIDandCorpID($brandID, $corparationID);
-
-    //     // if(isset($brandDBData[0]))
-    //     // {
-    //     //     # Brand data from DB directly
-    //     //     $brand_access[0]['PK'] = $this->autoFeildBreakup($brand_accessModule->primaryKey, $brand_accessDBData[0]);
-    //     //     $brand_access[0]['SK'] = $this->autoFeildBreakup($brand_accessModule->allowedFields, $brand_accessDBData[0]);
-
-    //     //     return $brand_access;
-    //     // }else
-    //     // {
-    //     //     return '';
-    //     // }
-    // }
 }
 ?>

@@ -126,7 +126,7 @@ trait BrandTrait {
         $this->brand_access['BrandID'] = $brand_accessModule->insertDatatoBrand_Access($brand_access);
 
         if(isset($this->brand_access['BrandID'])){
-            return $this->brand['BrandID'];
+            return $this->brand_access['BrandID'];
         }else{
             return '';
         }
@@ -152,11 +152,11 @@ trait BrandTrait {
     public function getBrand_AccessDataviaBrandIDCorpID($brandID, $corparationID, $status = 'E')
     {
         $brand_accessModule = new Brand_Access();
-
+        
         # Brand Access data from DB directly
         $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyBrandIDandCorpID($brandID, $corparationID, $status);
 
-        if(isset($brandDBData[0])){
+        if(isset($brand_accessDBData[0])){
             # Converting the DB Data to an Array
             $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
 
@@ -185,6 +185,23 @@ trait BrandTrait {
 
         # Brand Access data from DB directly
         $brand_accessDBData = $brand_accessModule->updateStatusofBrand_AccessbyID($brand_accessID, $status);
+
+        if(isset($brand_accessDBData[0])){
+            # Converting the DB Data to an Array
+            $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
+
+            return $this->brand_access;
+        }else{
+            return '';
+        }
+    }
+
+    public function setBrand_AccessStatusviaBrandIDandOwnerID($brandID, $corparationID, $status)
+    {
+        $brand_accessModule = new Brand_Access();
+
+        # Brand Access data from DB directly
+        $brand_accessDBData = $brand_accessModule->updateStatusofBrand_AccessbyBrandIDandCorparateID($brandID, $corparationID, $status);
 
         if(isset($brand_accessDBData[0])){
             # Converting the DB Data to an Array

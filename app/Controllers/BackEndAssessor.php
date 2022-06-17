@@ -36,8 +36,6 @@ class BackEndAssessor extends BackEndController
         // # User Login History
         // $this->userLoginHistory($data['user'][0]['PK']['UserID']);
 
-        // var_dump($data);
-        // die;
         # Session Creation
         $this->sessionSupplier($data['User'][0]['UserID'],$data['User'][0]['Corparation'][0]['CorparationID']);
         
@@ -113,9 +111,7 @@ class BackEndAssessor extends BackEndController
         }
 
         $data['brand_details'] = $this->brandDetails($brandID);
-        // var_dump($data);
-        // die;
-        // echo $brandID;
+
         return view('SupplierPlateform/Brand-Management/brandInformation',$data);
         
     }
@@ -142,7 +138,7 @@ class BackEndAssessor extends BackEndController
         }
 
         $data = [
-            'brandacessid' => '',
+            'brandid' => '',
             'brand' => '',
             'summary' => '',
             'description' => '',
@@ -189,7 +185,7 @@ class BackEndAssessor extends BackEndController
             }
 
             $data = [
-                'brandacessid' => '',
+                'brandid' => '',
                 'brand' => $brand['Name'],
                 'summary' => $brand['Summary'],
                 'description' => $brand['Description'],
@@ -220,7 +216,6 @@ class BackEndAssessor extends BackEndController
         
         $status = 'The Brand '.$brand['Name'].' Creation was successful';
         return redirect()->to(base_url('company-brands'))->with('success',$status);
-        // return $this->brandDataCreate($brandData, $sellerToo);
     }
 
     public function modifyBrand($brandID) #Screen Access Task
@@ -236,7 +231,7 @@ class BackEndAssessor extends BackEndController
 
         $stats = $this->brandSellsStatic($brandID, $_SESSION['CorpID']);
 
-        if($stats != 'No-Brand-Access'){
+        if($stats == 'No-Brand-Access'){
             $sellertoo = '';
         }else{
             $sellertoo = 'checked';
@@ -259,7 +254,6 @@ class BackEndAssessor extends BackEndController
     public function editBrand()
     {
         $sellerTooPost = $this->request->getPost('sellertoo');
-        $sellertoo = '';
 
         $brandData = [
             'BrandID' => $this->request->getPost('brandid'),
@@ -293,7 +287,7 @@ class BackEndAssessor extends BackEndController
                 $data['status'] = 'Active equipments are available and so cannot remove the seller condition of this Brand. ';
             }elseif($stats == 'No-Equip'){
                 # No equipments are available for the Brand
-                $this->setBrand_AccessStatusviaBrandID($brand_accessID, 'E');
+                $this->setBrand_AccessStatusviaBrandIDandOwnerID($brandData['BrandID'],$brandData['OwnerID'], 'E');
                 $changed = true;
             }
 
@@ -304,6 +298,7 @@ class BackEndAssessor extends BackEndController
             # No Access changed or Brand Inform remains to be changed
             $data['status'] = 'No Brand detail changes have being done. ';
         }else{
+            # Brand changing controller
             $changed = $this->changingBrandDetails($changes, $brandData);
         }
 
@@ -323,33 +318,6 @@ class BackEndAssessor extends BackEndController
         }
             
         return redirect()->to(base_url('company-brands'));
-            
-        // return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
-
-        #returning Data if modification was not approved
-        // $data = [
-        //     'brandid' => $brandData['BrandID'],
-        //     'brand' => $brandData['Name'],
-        //     'summary' => $brandData['Summary'],
-        //     'description' => $brandData['Description'],
-        //     'button' => 'Modify',
-        //     'url' => 'brand-editing', 
-        // ];
-
-        // return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
-
-        // $brand_access = $this->brand_accessDetail($brandData['brandacessid']);
-
-        // if($brandData['Name'] != $brand_access[0]['SK']['Name']){
-        //     // $data['status'] = 'Data';
-        // }elseif($brandData['Summary'] != $brand_access[0]['SK']['Summary']){
-
-        // }elseif($brandData['Description'] != $brand_access[0]['SK']['Description']){
-        // // }elseif($sellerToo != $brand_access[0]['SK']['Description']){
-
-        // }else{
-            
-        // }
     }
     
     public function changeBrand($brand_accessID)

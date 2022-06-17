@@ -27,7 +27,7 @@
             
             <div class="mb-3 mt-3">
                 <label for="brand" class="form-label">Brand Name:</label>
-                <input type="text" class="form-control" id="brand" name="brand" value='<?= $brand ?>' placeholder="Enter Brand Name" required readonly>
+                <input type="text" class="form-control" id="brand" name="brand" value='<?= $brand ?>' placeholder="Enter Brand Name" required>
             </div>
             <div class="mb-3">
                 <label for="summary" class="form-label">Summary:</label>

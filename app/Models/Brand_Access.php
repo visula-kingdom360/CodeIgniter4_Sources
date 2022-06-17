@@ -76,6 +76,21 @@
             return $data;
         }
 
+        public function updateStatusofBrand_AccessbyBrandIDandCorparateID($brandID, $corparationID, $status = 'E')
+        {
+            
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->foreignKeys[0] => $brandID]);
+            $query = $blueprint->where([$this->foreignKeys[1] => $corparationID]);
+
+            $data = $query->get()->getResult();
+            $query = $blueprint->where([$this->foreignKeys[0] => $brandID]);
+            $query = $blueprint->where([$this->foreignKeys[1] => $corparationID]);
+            $query = $blueprint->update([$this->allowedFields[1] => $status]);
+
+            return $data;
+        }
+
         public function insertDatatoBrand_Access($brand_access)
         {
             $blueprint = $this->db->table($this->table);

@@ -54,8 +54,9 @@
             $query = $blueprint->where([$this->primaryKey[0] => $brandData['BrandID']]);
             for ($i=0; $i < $count; $i++) { 
                 # looping query list
-                $query = $blueprint->update([$changes[$i] => $brandData[$changes[$i]]]);
+                $query = $blueprint->set([$changes[$i] => $brandData[$changes[$i]]]);
             }
+            $query = $blueprint->update();
             
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->primaryKey[0] => $brandData['BrandID']]);
