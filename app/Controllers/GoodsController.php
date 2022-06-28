@@ -22,7 +22,7 @@ class GoodsController extends AccessController
     //     $brand_access = [];
 
     //     $brand_accessModule = new Brand_Access();
-    //     $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyCorpID($corparationID, $this->limitedBrands);
+    //     $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyCorpID($corparationID, $this->limitedBrands);
 
     //     foreach ($brand_accessDBData as $row => $feilds) {
     //         # Brand Access data from DB directly

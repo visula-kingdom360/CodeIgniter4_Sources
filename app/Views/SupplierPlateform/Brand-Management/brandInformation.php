@@ -2,21 +2,21 @@
 <?= $this->section("title") ?> Brand Detail <?= $this->endSection() ?>
 <?= $this->section("access-privilege") ?><li><a href="">User Logged in Information</a></li><?= $this->endSection() ?>
 <?= $this->section("content") ?>
-<div class='brand-manager container m-5'>
+<div class='supplier-plateform/brands/access/brand-details container m-5'>
     <div class='row d-flex justify-content-center'>
         <h1>Brands wise Information</h1>
         <form action="<?= base_url('') ?>" method="post">
             <div class="mb-3 mt-3">
                 <label for="brand" class="form-label">Brand Name:</label>
-                <input type="text" class="form-control" id="brand" name="brand" value='<?= $brand_details['Brand'] ?>' placeholder="Enter Brand Name" required disabled>
+                <input type="text" class="form-control" id="brand" name="brand" value='<?= $brand_detail['Brand'] ?>' placeholder="Enter Brand Name" required disabled>
             </div>
             <div class="mb-3">
                 <label for="summary" class="form-label">Summary:</label>
-                <textarea class="form-control" id="summary" name="summary" rows="5" placeholder="Enter Brand Summary here" required disabled><?= $brand_details['Summary'] ?></textarea>
+                <textarea class="form-control" id="summary" name="summary" rows="5" placeholder="Enter Brand Summary here" required disabled><?= $brand_detail['Summary'] ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description:</label>
-                <textarea class="form-control" id="description" rows="10" name="description" placeholder="Enter Brand Description here" disabled><?= $brand_details['Description'] ?></textarea>
+                <textarea class="form-control" id="description" rows="10" name="description" placeholder="Enter Brand Description here" disabled><?= $brand_detail['Description'] ?></textarea>
             </div>            
             <div class="container">
                 <div class=" d-flex">
@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($brand_details['Request-Details'] as $key => $value){ ?>
+                                <?php foreach($brand_detail['Request-Details'] as $key => $value){ ?>
                                     <tr>
                                         <td><?= str_pad($value['Brand_AccessID'],11,'0',STR_PAD_LEFT) ?></td>
                                         <td><?= $value['CompanyName'] ?></td>
@@ -56,7 +56,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($brand_details['Rejected-Details'] as $key => $value){ ?>
+                                <?php foreach($brand_detail['Rejected-Details'] as $key => $value){ ?>
                                     <tr>
                                         <td><?= str_pad($value['Brand_AccessID'],11,'0',STR_PAD_LEFT) ?></td>
                                         <td><?= $value['CompanyName'] ?></td>
@@ -79,7 +79,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($brand_details['Accepted-Details'] as $key => $value){ ?>
+                                <?php foreach($brand_detail['Accepted-Details'] as $key => $value){ ?>
                                     <tr class='table-bordered'>
                                         <td><?= str_pad($value['Brand_AccessID'],11,'0',STR_PAD_LEFT) ?></td>
                                         <td><?= $value['CompanyName'] ?></td>
@@ -94,8 +94,11 @@
             <br>
             <!-- <button type="submit" class="btn btn-primary">Modify</button>
             <button type="Reset" class="btn btn-danger">Reset</button> -->
-            <a href="<?= base_url('modify-brand/'.$brand_details['BrandID']) ?>" class="btn btn-success">Modify Brand</a>
-            <a href="<?= base_url('company-brands') ?>" class="btn btn-dark">Return Back to the Previous Screen</a>
+            <a href="<?= base_url('supplier-plateform/brands/owned/modify-brand/'.$brand_detail['BrandID']) ?>" class="btn btn-success">Modify Brand</a>
+            <a href="<?= base_url('supplier-plateform/brands/owned/brand-details') ?>" class="btn btn-dark">Return Back to the Previous Screen</a>
+            <?php if($brand_detail['expire']){ ?>
+                <a href="<?= base_url('supplier-plateform/brands/owned/expire-brand/'.$brand_detail['BrandID']) ?>" class="btn btn-danger">Expire Brand</a>
+            <?php }?>
         </form>
     </div>
 </div>

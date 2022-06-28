@@ -2,7 +2,8 @@
 <?= $this->section("title") ?> Brand Management <?= $this->endSection() ?>
 <?= $this->section("access-privilege") ?><li><a href="">User Logged in Information</a></li><?= $this->endSection() ?>
 <?= $this->section("content") ?>
-<div class='brand-manager container m-5'>
+<script src="myscripts.js"></script>
+<div class='supplier-plateform/brands/access/brand-details container m-5'>
     <div class='row d-flex justify-content-center'>
         <?php
             if($status != '')
@@ -44,7 +45,7 @@
             </div>
             <button type="submit" class="btn btn-primary"><?= $button ?></button>
             <button type="Reset" class="btn btn-danger">Reset</button>
-            <a href="<?= base_url('company-brands') ?>" class="btn btn-dark">Return Back to the Previous Screen</a>
+            <a href="<?= base_url('supplier-plateform/brands/owned/brand-details') ?>" class="btn btn-dark">Return Back to the Previous Screen</a>
         </form>
     </div>
 </div>

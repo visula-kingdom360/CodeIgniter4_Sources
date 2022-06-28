@@ -1,0 +1,78 @@
+CRITICAL - 2022-06-21 17:41:38 --> Undefined index: Name
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(393): App\Controllers\BackEndController->companyAccessBrandNames('4')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-21 17:44:30 --> Undefined index: Name
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(393): App\Controllers\BackEndController->companyAccessBrandNames('4')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-21 18:07:44 --> array_search() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_search() ...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndController.php(30): array_search('SR Site VIews', 'McFarlane Toys', true)
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(394): App\Controllers\BackEndController->exclusionBrands('McFarlane Toys')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-21 18:08:37 --> Undefined variable: brand_access
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(405): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 405, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-21 18:09:46 --> Undefined variable: brand_access
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\Brand-Management\mapBrandAccess.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(407): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-21 18:16:23 --> Undefined variable: brand_access
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\Brand-Management\mapBrandAccess.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(407): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-21 18:17:09 --> Undefined variable: brand_access
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Views\SupplierPlateform\Brand-Management\mapBrandAccess.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Common.php(1089): CodeIgniter\View\View->render('SupplierPlatefo...', Array, true)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(407): view('SupplierPlatefo...', Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapBrandAccess()
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-21 18:30:07 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-21 22:04:09 --> Class 'App\Controllers\Genre' not found
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\GoodsAccessor.php(30): App\Controllers\GoodsController->genreDetails()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\GoodsAccessor->mainView()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoodsAccessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-21 23:14:38 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

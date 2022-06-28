@@ -2,7 +2,7 @@
 <?= $this->section("title") ?> Company Brands <?= $this->endSection() ?>
 <?= $this->section("access-privilege") ?><li><a href="">User Logged in Information</a></li><?= $this->endSection() ?>
 <?= $this->section("content") ?>
-<div class='brand-manager container m-5'>
+<div class='supplier-plateform/brands/access/brand-details container m-5'>
     <div class='row d-flex justify-content-center'>
         <?php
             if(session()->getFlashdata('status'))
@@ -37,8 +37,8 @@
                         <h1>Current Access Brand Details</h1>
                     </th>
                     <th colspan="4">
-                        <a href="<?= base_url('brand-manager') ?>" class="btn btn-secondary w-100 my-1">Back to Brand Access</a>
-                        <a href="<?= base_url('add-new-brand') ?>" class="btn btn-primary w-100 my-1">Add My Brands</a>
+                        <a href="<?= base_url('supplier-plateform/brands/access/brand-details') ?>" class="btn btn-secondary w-100 my-1">Back to Brand Access</a>
+                        <a href="<?= base_url('supplier-plateform/brands/owned/add-new-brand') ?>" class="btn btn-primary w-100 my-1">Add My Brands</a>
                     </th>
                 </tr>
                 <tr>
@@ -59,14 +59,14 @@
             <tbody>
                 <?php foreach($owned_brands as $key => $value){ ?>
                 <tr class='table-bordered'>
-                    <td><?= str_pad($value['BrandID'],11,'0',STR_PAD_LEFT) ?></td>
+                        <td><?= str_pad($value['BrandID'],11,'0',STR_PAD_LEFT) ?></td>
                     <td><?= $value['Brand'] ?></td>
                     <td><?= $value['Summary'] ?></td>
                     <td data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?= $tool_tips['Request_Tooltip'] ?>"><?= $value['Request_Count'] ?></td>
                     <td data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?= $tool_tips['Rejected_Tooltip'] ?>"><?= $value['Rejected_Count'] ?></td>
                     <td data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?= $tool_tips['Accepted_Tooltip'] ?>"><?= $value['Accepted_Count'] ?></td>
                     <td>
-                        <a href="<?= base_url('more-abt-brand/'.$value['BrandID']) ?>" class="btn btn-success w-100 m-1">More Details</a>
+                        <a href="<?= base_url('supplier-plateform/brands/owned/more-abt-brand/'.$value['BrandID']) ?>" class="btn btn-success w-100 m-1">More Details</a>
                     </td>
                 </tr>
                 <?php } ?>

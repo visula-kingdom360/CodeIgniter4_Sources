@@ -15,6 +15,20 @@ trait BrandTrait {
     protected $limitedBrands = 99;
 
     ##################### B R A N D   C R U D #####################
+    
+    public function getBrandData()
+    {
+        $brandModule = new Brand();
+
+        # Brand data from DB directly
+        $brandDBData = $brandModule->selectBrandbyStatus();
+
+        # Converting the DB Data to an Array
+        $this->brand = $this->pushModelDBDataToArrayReturn($brandModule, $brandDBData);
+
+        return $this->brand;
+    }
+
     public function getBrandDatafromOwnerID($ownerID)
     {
         $brandModule = new Brand();
@@ -88,16 +102,30 @@ trait BrandTrait {
         # Converting the DB Data to an Array
         $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
 
-        return  $this->brand_access;
+        return $this->brand;
+    }
+
+    public function setBrandStatusviaID($brandID, $status = 'E')
+    {
+        $brand_accessModule = new Brand();
+
+        # Brand Access data from DB directly
+        $brand_accessDBData = $brand_accessModule->updateStatusofBrandbyID($brandID, $status);
+        
+        # Converting the DB Data to an Array
+        $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
+
+        return $this->brand;
     }
 
     ##################### B R A N D   A C C E S S   C R U D #####################
-    public function getBrand_AccessDatafromCorpationID($corparationID)
+    # 
+    public function getBrand_AccessData() # Not used currently
     {
         $brand_accessModule = new Brand_Access();
 
         # Brand Access data from DB directly
-        $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyCorpID($corparationID, $this->limitedBrands);
+        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyCorpID($corparationID, $this->limitedBrands);
 
         # Converting the DB Data to an Array
         $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
@@ -105,20 +133,21 @@ trait BrandTrait {
         return  $this->brand_access;
     }
 
-    public function changeBrand_AccessStatusviaID()
+    # gathering the Brand Access detail via Corparate ID method from DB
+    public function getBrand_AccessDatafromCorparationID($corparationID)
     {
         $brand_accessModule = new Brand_Access();
 
         # Brand Access data from DB directly
-        $brand_accessDBData = $brand_accessModule->updateStatusofBrand_AccessbyID($brand_accessID, $status);
+        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyCorpID($corparationID);
 
         # Converting the DB Data to an Array
         $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
 
         return  $this->brand_access;
     }
-    
-    public function brandAccessCreation($brand_access)
+
+    public function addBrand_AccessData($brand_access)
     {
         $brand_accessModule = new Brand_Access();
 
@@ -132,29 +161,12 @@ trait BrandTrait {
         }
     }
 
-    public function brand_accessDetail($brand_accessID)
-    {
-        $brand_accessModule = new Brand_Access();
-        
-        # Brand Access data from DB directly
-        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyID($brand_accessID);
-
-        if(isset($brand_accessDBData[0])){
-            # Converting the DB Data to an Array
-            $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
-
-            return $this->brand_access;
-        }else{
-            return '';
-        }
-    }
-
     public function getBrand_AccessDataviaBrandIDCorpID($brandID, $corparationID, $status = 'E')
     {
         $brand_accessModule = new Brand_Access();
         
         # Brand Access data from DB directly
-        $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyBrandIDandCorpID($brandID, $corparationID, $status);
+        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyBrandIDandCorpID($brandID, $corparationID, $status);
 
         if(isset($brand_accessDBData[0])){
             # Converting the DB Data to an Array
@@ -171,7 +183,7 @@ trait BrandTrait {
         $brand_accessModule = new Brand_Access();
 
         # Brand Access data from DB directly
-        $brand_accessDBData = $brand_accessModule->selectBrand_AccessesbyBrandIDandRelationship($brandID,$relationship);
+        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyBrandIDandRelationship($brandID,$relationship);
 
         # Converting the DB Data to an Array
         $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);

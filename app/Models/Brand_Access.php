@@ -21,7 +21,17 @@
             'CorparationID',
         ];
 
-        public function selectBrand_AccessesbyCorpID($corparationID, $limit = 99, $status = 'E')
+        public function selectBrand_Access($limit = 99, $status = 'E')
+        {
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->allowedFields[1].'<>' => $status]);
+            $query = $blueprint->limit($limit);
+            $data = $query->get()->getResult();
+
+            return $data;
+        }
+
+        public function selectBrand_AccessbyCorpID($corparationID, $limit = 99, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->foreignKeys[1] => $corparationID]);
@@ -42,7 +52,7 @@
             return $data;
         }
 
-        public function selectBrand_AccessesbyBrandIDandRelationship($brandID, $relationship, $status = 'E')
+        public function selectBrand_AccessbyBrandIDandRelationship($brandID, $relationship, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->foreignKeys[0] => $brandID]);
@@ -53,7 +63,7 @@
             return $data;
         }
 
-        public function selectBrand_AccessesbyBrandIDandCorpID($brandID, $corpID, $status = 'E')
+        public function selectBrand_AccessbyBrandIDandCorpID($brandID, $corpID, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->foreignKeys[0] => $brandID]);

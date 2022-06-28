@@ -1,0 +1,134 @@
+CRITICAL - 2022-06-25 09:29:34 --> Undefined variable: corparationID
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(415): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 415, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 09:29:39 --> Undefined variable: corparationID
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(415): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 415, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 09:30:57 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:30:59 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:31:35 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:31:38 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:31:40 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:31:50 --> Call to undefined method App\Controllers\BackEndAssessor::selectBrandbyID()
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-25 09:53:11 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:10:12 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:10:31 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:10:54 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:12:12 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:12:42 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:48:56 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:49:33 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:49:40 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:50:03 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:50:08 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-25 10:50:16 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

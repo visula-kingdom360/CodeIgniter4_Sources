@@ -2,7 +2,7 @@
 <?= $this->section("title") ?> Brand Management <?= $this->endSection() ?>
 <?= $this->section("access-privilege") ?><li><a href="">User Logged in Information</a></li><?= $this->endSection() ?>
 <?= $this->section("content") ?>
-<div class='brand-manager container m-5'>
+<div class='supplier-plateform/brands/access/brand-details container m-5'>
     <div class='row d-flex justify-content-center'>
         <?php
             if(session()->getFlashdata('status'))
@@ -38,8 +38,8 @@
                     </th>
                     <th colspan="3">
                         
-                        <a href="<?= base_url('company-brands') ?>" class="btn btn-primary w-100 my-1">Owned Brands</a>
-                        <a href="<?= base_url('map-brand') ?>" class="btn btn-secondary w-100 my-1">Map New Brand</a>
+                        <a href="<?= base_url('supplier-plateform/brands/owned/brand-details') ?>" class="btn btn-primary w-100 my-1">Owned Brands</a>
+                        <a href="<?= base_url('supplier-plateform/brands/access/map-brand') ?>" class="btn btn-secondary w-100 my-1">Map New Brand</a>
                     </th>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                     <td style='text-align: right'><?= $value['EquipmentCount'] ?></td>
                     <td>
                         <?php if(($value['Brand_AccessID'] != '') && ($value['EquipmentCount']  == 0)){ ?>
-                        <a href="<?= base_url('expire-brand/'.$value['Brand_AccessID']) ?>" class="btn btn-danger w-100 m-1">Expire Brand</a>
+                        <a href="<?= base_url('supplier-plateform/brands/access/expire-brand/'.$value['Brand_AccessID']) ?>" class="btn btn-danger w-100 m-1">Expire Brand</a>
                         <?php }elseif($value['Brand_AccessID'] != ''){?>
                             <p class='text-secondary'><?= $active_equipment_true ?> </p>
                         <?php }else{?>

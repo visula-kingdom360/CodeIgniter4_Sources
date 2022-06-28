@@ -15,34 +15,47 @@
             'Name',
             'Summary',
             'Description',
+            'Status',
         ];
 
         protected $foreignKeys = [
             'OwnerID',
         ];
 
-        public function selectBrandbyID($brandID)
+        public function selectBrandbyStatus($status = 'E')
+        {
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->allowedFields[3].'<>' => $status]);
+            $data = $query->get()->getResult();
+
+            return $data;
+        }
+
+        public function selectBrandbyID($brandID, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->primaryKey[0] => $brandID]);
+            $query = $blueprint->where([$this->allowedFields[3].'<>' => $status]);
             $data = $query->get()->getResult();
 
             return $data;
         }
 
-        public function selectBrandbyOwnerID($ownerID)
+        public function selectBrandbyOwnerID($ownerID, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->foreignKeys[0] => $ownerID]);
+            $query = $blueprint->where([$this->allowedFields[3].'<>' => $status]);
             $data = $query->get()->getResult();
 
             return $data;
         }
 
-        public function selectBrandbyName($name)
+        public function selectBrandbyName($name, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->allowedFields[0] => $name]);
+            $query = $blueprint->where([$this->allowedFields[3].'<>' => $status]);
             $data = $query->get()->getResult();
 
             return $data;
@@ -60,6 +73,21 @@
             
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->primaryKey[0] => $brandData['BrandID']]);
+            $data = $query->get()->getResult();
+
+            
+            return $data;
+        }
+
+        public function updateStatusofBrandbyID($brandID, $status = 'E')
+        {
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->primaryKey[0] => $brandID]);
+            $query = $blueprint->set([$this->allowedFields[3] => $status]);
+            $query = $blueprint->update();
+
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->primaryKey[0] => $brandID]);
             $data = $query->get()->getResult();
 
             

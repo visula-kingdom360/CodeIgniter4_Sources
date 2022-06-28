@@ -6,13 +6,44 @@ class BackEndController extends AccessController
     use Traits\DB\BrandTrait;
     use Traits\DB\EquipmentTrait;
 
-    #Companies Brands Using and owned information base
+    # Company's Brand Name  list gathering method
+    public function companyAccessBrandNames($corparationID)
+    {
+        $brand_access_names = [];
+        $brand_access = $this->getBrand_AccessDatafromCorparationID($corparationID);
+
+        foreach ($brand_access as $row_1_key => $row_1_value) {
+            # code...
+            $brand_access_names[$row_1_key] = $this->brandName($row_1_value['BrandID']);
+        }
+
+        return $brand_access_names;
+    }
+
+    # Exluding brand details from existing given Brands
+    public function exclusionBrands($excluded_brands)
+    {
+        $all_brands = $this->getBrandData();
+
+        foreach ($all_brands as $row_1_key => $row_1_value) {
+            # loop all brand details
+            $searched_val = in_array($row_1_value['Name'],$excluded_brands);
+
+            if($searched_val){
+                unset($all_brands[$row_1_key]);
+            }
+        }
+
+        return $all_brands;
+    }
+
+    # Companies Brands Using and owned information base
     public function companyBrandDetails($corparationID) # Gather Details
     {
         $company_brands = [];
         $brand_info = [];
 
-        $brand_access_info = $this->getBrand_AccessDatafromCorpationID($corparationID);
+        $brand_access_info = $this->getBrand_AccessDatafromCorparationID($corparationID);
 
         foreach ($brand_access_info as $row_1_key => $row_1_value) {
             # access wise brand information
@@ -61,85 +92,13 @@ class BackEndController extends AccessController
         return $owned_brands;
     }
 
-    public function brandDetails($brandID) # Gather Details
-    {
-        $brands_details = [];
-        $brand_access = [];
-
-        $brand_info = $this->getBrandDataviaID($brandID);
-
-        if (isset($brand_info[0])) {
-            
-            # brand wise access count information
-            $relationships = $this->relationshipwiseBrandAccessDetails($brand_info[0]['BrandID'],'Detail-Only');
-
-            if(isset($relationships['requested'][0])){
-                foreach($relationships['requested'] as $row_2_key => $row_2_value) {
-                    # Brand Access ID value
-                    $brand_access['requested'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
-                    
-                    # Company Name for the brand access
-                    $brand_access['requested'][$row_2_key]['CompanyName'] = $this->companyName($row_2_value['CorparationID']);
-                    
-                    # Equipments count for the Brand's Accessed
-                    $brand_access['requested'][$row_2_key]['EquipmentCount'] = $this->brandEquipmentCount($row_2_value['Brand_AccessID']);
-                }
-            }else{
-                $brand_access['requested'] = [];
-            }
-
-            if(isset($relationships['rejected'][0])){
-                foreach($relationships['rejected'] as $row_2_key => $row_2_value) {
-                    # Brand Access details
-                    $brand_access['rejected'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
-                    
-                    # Company Name for the brand access
-                    $brand_access['rejected'][$row_2_key]['CompanyName'] = $this->companyName($row_2_value['CorparationID']);
-                    
-                    # Equipments count for the Brand's Accessed
-                    $brand_access['rejected'][$row_2_key]['EquipmentCount'] = $this->brandEquipmentCount($row_2_value['Brand_AccessID']);
-                }
-            }else{
-                $brand_access['rejected'] = [];
-            }
-
-            if(isset($relationships['validated'][0])){
-                foreach($relationships['validated'] as $row_2_key => $row_2_value) {
-                    # Brand Access details
-                    $brand_access['validated'][$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
-                    
-                    # Company Name for the brand access
-                    $brand_access['validated'][$row_2_key]['CompanyName'] = $this->companyName($row_2_value['CorparationID']);
-                    
-                    # Equipments count for the Brand's Accessed
-                    $brand_access['validated'][$row_2_key]['EquipmentCount'] = $this->brandEquipmentCount($row_2_value['Brand_AccessID']);
-                }
-            }else{
-                $brand_access['validated'] = [];
-            }
-
-            # data list passing for the front-end
-            $brands_detail['BrandID']     = $brand_info[0]['BrandID'];
-            $brands_detail['Brand']       = $brand_info[0]['Name'];
-            $brands_detail['Summary']     = $brand_info[0]['Summary'];
-            $brands_detail['Description'] = $brand_info[0]['Description'];
-            $brands_detail['Request-Details']  = $brand_access['requested'];
-            $brands_detail['Rejected-Details'] = $brand_access['rejected'];
-            $brands_detail['Accepted-Details'] = $brand_access['validated'];
-
-            $brand_access = [];
-        }
-
-        return $brands_detail;
-    }
-
     # Company Brand Status Changing 
-    public function companyBrandStsChg($brand_accessID, $status = 'E')
+    public function companyBrandAccessStsChg($brand_accessID, $status = 'E')
     {
-        #getting the wordings of the Status
+        # getting the wordings of the Status
         $statusWording = $this->statusExpand($status);
         
-        #If Status is Unknown returning Error
+        # If Status is Unknown returning Error
         if( $statusWording == 'Unknown')
         {
             $data['error'] = $status.' is not a common brand, please contact the adminstation.';
@@ -149,30 +108,29 @@ class BackEndController extends AccessController
 
         $data['brand_access'] = $this->setBrand_AccessStatusviaBrandID($brand_accessID, $status);
 
-        #Brand Access via ID was not found
+        # Brand Access via ID was not found
         if(!isset($data['brand_access'][0]['BrandID']))
         {
             $data['status'] = 'Status changing failed becuase Brand Access ID was not found.';
-            return redirect()->to(base_url('brand-manager'))->with('status',$data['status']);
+            return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'))->with('status',$data['status']);
         }
         
-        #Brand Access templated for returning common status
+        # Brand Access templated for returning common status
         $commonSts = 'Status changing to '.$statusWording.' of Brand ID: '.$data['brand_access'][0]['BrandID'];
 
         if($data['brand_access'][0]['Status'] == $status)
         {
-            #Brand Access status not require change
+            # Brand Access status not require change
             $data['status'] = $commonSts.' failed beause status is already '.$statusWording.' .';
-            return redirect()->to(base_url('brand-manager'))->with('status',$data['status']);
+            return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'))->with('status',$data['status']);
         }
 
-        #Brand Access status cahnge was successful
+        # Brand Access status cahnge was successful
         $data['status'] = $commonSts.' was done successful.';
             
-        #redirecting to Brand Management Screen
-        return redirect()->to(base_url('brand-manager'))->with('success',$data['status']);
+        # redirecting to Brand Management Screen
+        return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'))->with('success',$data['status']);
     }
-
 
     # Brand Equipment Counting
     public function brandEquipmentCount($brand_accessID)
@@ -207,6 +165,23 @@ class BackEndController extends AccessController
         }
     }
 
+    # Relationship data breakdown and automatically
+    public function relationshipDetails($relationship)
+    {
+        foreach($relationship as $row_2_key => $row_2_value) {
+            # Brand Access details
+            $brand_access[$row_2_key]['Brand_AccessID'] = $row_2_value['Brand_AccessID'];
+            
+            # Company Name for the brand access
+            $brand_access[$row_2_key]['CompanyName'] = $this->companyName($row_2_value['CorparationID']);
+            
+            # Equipments count for the Brand's Accessed
+            $brand_access[$row_2_key]['EquipmentCount'] = $this->brandEquipmentCount($row_2_value['Brand_AccessID']);
+        }
+
+        return $brand_access;
+    }
+
     # Tooltip Brand Access
     public function tooltipsforBrandAccess() #Reusable
     {
@@ -223,6 +198,14 @@ class BackEndController extends AccessController
         $companyDetails = $this->getCorparationDataviaCorpID($corparateID);
 
         return $companyDetails[0]['Name'];
+    }
+
+    # Return Brand Name my sending Brand ID
+    public function brandName($brandID)
+    {
+        $brandDetails = $this->getBrandDataviaID($brandID);
+
+        return $brandDetails[0]['Name'];
     }
 
     # Compare Brand Details with the Datapassed
@@ -282,7 +265,7 @@ class BackEndController extends AccessController
             $this->setBrand_AccessStatusviaBrandID($brand_access_avail[0]['Brand_AccessID'], 'A');
             return 'Actived';
         }else{
-            $this->brandAccessCreation($brand_access);
+            $this->addBrand_AccessData($brand_access);
             return 'Created';
         }
     }

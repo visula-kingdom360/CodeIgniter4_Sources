@@ -55,42 +55,45 @@ $routes->get('jobs', 'GoodsAccessor::jobs');
 
 #Main Routers - Supplier
 $routes->get('login', 'BackEndAssessor::loginView');
-    $routes->post('login-request', 'BackEndAssessor::loginRequest');
+$routes->post('login-request', 'BackEndAssessor::loginRequest');
 
-$routes->get('supplier', 'BackEndAssessor::supplierView');
 
 #Supplier Plateforms Routers - Sections
+$routes->get('supplier-plateform', 'BackEndAssessor::supplierView');
+
     #Brand Manager Routers
-    $routes->get('brand-manager', 'BackEndAssessor::brandManager');
-        $routes->get('company-brands','BackEndAssessor::companyBrand');
-            $routes->get('add-new-brand', 'BackEndAssessor::newBrand');        
-                $routes->post('brand-creation', 'BackEndAssessor::createBrand');
-                $routes->get('more-abt-brand/(:num)', 'BackEndAssessor::moreBrandDetails/$1');
+    $routes->get('supplier-plateform/brands/owned/brand-details', 'BackEndAssessor::companyBrand');
+    $routes->get('supplier-plateform/brands/owned/add-new-brand', 'BackEndAssessor::newBrand');
+    $routes->post('supplier-plateform/brands/owned/brand-creation', 'BackEndAssessor::createBrand');
+    
+    $routes->get('supplier-plateform/brands/owned/more-abt-brand/(:num)', 'BackEndAssessor::moreBrandDetails/$1');
+    $routes->get('supplier-plateform/brands/owned/modify-brand/(:num)', 'BackEndAssessor::modifyBrand/$1');
+    $routes->get('supplier-plateform/brands/owned/expire-brand/(:num)','BackEndAssessor::expireBrand/$1');
+    $routes->post('supplier-plateform/brands/owned/brand-editing', 'BackEndAssessor::editBrand');
 
-            $routes->get('modify-brand/(:num)', 'BackEndAssessor::modifyBrand/$1');
-                $routes->post('brand-editing', 'BackEndAssessor::editBrand');
-            $routes->get('change-brand/(:num)', 'BackEndAssessor::changeBrand/$1');
-
-        $routes->get('map-brand', 'BackEndAssessor::brandManager');
-        $routes->get('expire-brand/(:num)', 'BackEndAssessor::expireBrand/$1');
+    $routes->get('supplier-plateform/brands/access/brand-details', 'BackEndAssessor::brandManager');
+    $routes->get('supplier-plateform/brands/access/map-brand', 'BackEndAssessor::mapBrandAccess');
+    $routes->post('supplier-plateform/brands/access/js-request/brand-detail', 'BackEndAssessor::viewBrandDetail');
+    $routes->post('supplier-plateform/brands/access/add-mapped-brand', 'BackEndAssessor::mapNewAccess');
+    $routes->get('supplier-plateform/brands/access/expire-brand/(:num)', 'BackEndAssessor::expireBrandAccess/$1');
     
     #Product Store Routers
-    $routes->get('product-store', 'BackEndAssessor::productStorage');
+    $routes->get('supplier-plateform/product-store', 'BackEndAssessor::productStorage');
 
     #Offer Manager Routers
-    $routes->get('offer-manager', 'BackEndAssessor::offerManager');
+    $routes->get('supplier-plateform/offer-manager', 'BackEndAssessor::offerManager');
 
     #Serice Plateform Routers
-    $routes->get('service-plateform', 'BackEndAssessor::servicePlateform');
+    $routes->get('supplier-plateform/service-plateform', 'BackEndAssessor::servicePlateform');
     
     #Job Hub Routers
-    $routes->get('job-hub', 'BackEndAssessor::jobHub');
+    $routes->get('supplier-plateform/job-hub', 'BackEndAssessor::jobHub');
     
     #Approval Hub Routers
-    $routes->get('approval-hub', 'BackEndAssessor::approvalHub');
+    $routes->get('supplier-plateform/approval-hub', 'BackEndAssessor::approvalHub');
     
     #Report Center Routers
-    $routes->get('reports-center', 'BackEndAssessor::reportsCenter');
+    $routes->get('supplier-plateform/reports-center', 'BackEndAssessor::reportsCenter');
 
 $routes->get('KDM', 'BackEndAssessor::kingdom360');
 

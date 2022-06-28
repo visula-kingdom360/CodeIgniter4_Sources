@@ -1,0 +1,82 @@
+CRITICAL - 2022-06-28 10:07:47 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-28 10:40:42 --> session_start(): Failed to decode session object. Session has been destroyed
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_start()...', 'C:\\xampp\\htdocs...', 894, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Session\Session.php(894): session_start()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Session\Session.php(238): CodeIgniter\Session\Session->startSession()
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BaseController.php(50): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(810): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-06-28 22:21:33 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-28 22:21:49 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-28 22:48:50 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-06-28 23:42:42 --> Unknown column 'CorparationID' in 'field list'
+CRITICAL - 2022-06-28 23:42:42 --> Unknown column 'CorparationID' in 'field list'
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `br...', 0)
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `br...')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `br...')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `br...', Array, false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand.php(100): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(86): App\Models\Brand->inserDatatoBrand(Array)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(408): App\Controllers\BackEndController->addBrandData(Array)
+#7 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->mapNewAccess()
+#8 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#9 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-28 23:48:28 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::insert() must be of the type array or null, string given, called in C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php on line 107
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(107): CodeIgniter\Database\BaseBuilder->insert('1')
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(155): App\Models\Brand_Access->insertDatatoBrand_Access('1')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(419): App\Controllers\BackEndController->addBrand_AccessData('1')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-28 23:48:38 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::insert() must be of the type array or null, string given, called in C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php on line 107
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Models\Brand_Access.php(107): CodeIgniter\Database\BaseBuilder->insert('1')
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\Traits\DB\BrandTrait.php(155): App\Models\Brand_Access->insertDatatoBrand_Access('1')
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\BackEndAssessor.php(419): App\Controllers\BackEndController->addBrand_AccessData('1')
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\BackEndAssessor->viewBrandDetail()
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BackEndAssessor))
+#5 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-28 23:52:09 --> Class 'App\Controllers\Genre' not found
+#0 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\app\Controllers\GoodsAccessor.php(30): App\Controllers\GoodsController->genreDetails()
+#1 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(832): App\Controllers\GoodsAccessor->mainView()
+#2 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoodsAccessor))
+#3 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SR_Productions\BIT_Project\CodeIgniter4_Sources\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

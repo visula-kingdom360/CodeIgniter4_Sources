@@ -98,7 +98,7 @@ class BackEndAssessor extends BackEndController
         return view('SupplierPlateform/Brand-Management/companyBrands',$data);
     }
 
-    // # Brand Details
+    # Brand Details
     public function moreBrandDetails($brandID)
     {
         $data = [];
@@ -110,7 +110,50 @@ class BackEndAssessor extends BackEndController
             return redirect()->to(base_url('login'));
         }
 
-        $data['brand_details'] = $this->brandDetails($brandID);
+        $brand_detail = [];
+        $brand_access = [];
+
+        $brand_info = $this->getBrandDataviaID($brandID);
+        $expire = true;
+
+        if (isset($brand_info[0])) {
+            
+            # brand wise access count information
+            $relationships = $this->relationshipwiseBrandAccessDetails($brand_info[0]['BrandID'],'Detail-Only');
+
+            if(isset($relationships['requested'][0])){
+                $brand_access['requested'] = $this->relationshipDetails($relationships['requested']);
+                $expire = false;
+            }else{
+                $brand_access['requested'] = [];
+            }
+
+            if(isset($relationships['rejected'][0])){
+                $brand_access['rejected'] = $this->relationshipDetails($relationships['rejected']);
+            }else{
+                $brand_access['rejected'] = [];
+            }
+
+            if(isset($relationships['validated'][0])){
+                $brand_access['validated'] = $this->relationshipDetails($relationships['validated']);
+                $expire = false;
+            }else{
+                $brand_access['validated'] = [];
+            }
+
+            # data list passing for the front-end
+            $brand_detail['BrandID']     = $brand_info[0]['BrandID'];
+            $brand_detail['Brand']       = $brand_info[0]['Name'];
+            $brand_detail['Summary']     = $brand_info[0]['Summary'];
+            $brand_detail['Description'] = $brand_info[0]['Description'];
+            $brand_detail['Request-Details']  = $brand_access['requested'];
+            $brand_detail['Rejected-Details'] = $brand_access['rejected'];
+            $brand_detail['Accepted-Details'] = $brand_access['validated'];
+            $brand_detail['expire'] = $expire;
+
+            $brand_access = [];
+        }
+        $data['brand_detail'] = $brand_detail;
 
         return view('SupplierPlateform/Brand-Management/brandInformation',$data);
         
@@ -144,7 +187,7 @@ class BackEndAssessor extends BackEndController
             'description' => '',
             'sellertoo' => '',
             'button' => 'Create',
-            'url' => 'brand-creation',
+            'url' => 'supplier-plateform/brands/owned/brand-creation',
             'status' => '',
         ];
 
@@ -191,7 +234,7 @@ class BackEndAssessor extends BackEndController
                 'description' => $brand['Description'],
                 'sellertoo' => $sellerToo,
                 'button' => 'Create',
-                'url' => 'brand-creation',
+                'url' => 'supplier-plateform/brands/owned/brand-creation',
                 'status' => $status,
             ];
     
@@ -211,14 +254,15 @@ class BackEndAssessor extends BackEndController
             ];
     
             #calling to create Brand's Access
-            $this->brandAccessCreation($brand_access);
+            $this->addBrand_AccessData($brand_access);
         }
         
         $status = 'The Brand '.$brand['Name'].' Creation was successful';
-        return redirect()->to(base_url('company-brands'))->with('success',$status);
+        return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'))->with('success',$status);
     }
 
-    public function modifyBrand($brandID) #Screen Access Task
+    # Modification 
+    public function modifyBrand($brandID)
     {
         $sessionActive = $this->sessionValidate();
         if (!$sessionActive) {
@@ -243,7 +287,7 @@ class BackEndAssessor extends BackEndController
             'summary' => $brand[0]['Summary'],
             'description' => $brand[0]['Description'],
             'button' => 'Modify',
-            'url' => 'brand-editing',
+            'url' => 'supplier-plateform/brands/owned/brand-editing',
             'status' => '',
             'sellertoo' => $sellertoo,
         ];
@@ -253,6 +297,7 @@ class BackEndAssessor extends BackEndController
 
     public function editBrand()
     {
+        $changed = false;
         $sellerTooPost = $this->request->getPost('sellertoo');
 
         $brandData = [
@@ -284,7 +329,7 @@ class BackEndAssessor extends BackEndController
         }else{
             if($stats == 'Active-Equip'){
                 # Active equipments are available for the Brand
-                $data['status'] = 'Active equipments are available and so cannot remove the seller condition of this Brand. ';
+                $status = 'Active equipments are available and so cannot remove the seller.';
             }elseif($stats == 'No-Equip'){
                 # No equipments are available for the Brand
                 $this->setBrand_AccessStatusviaBrandIDandOwnerID($brandData['BrandID'],$brandData['OwnerID'], 'E');
@@ -294,42 +339,94 @@ class BackEndAssessor extends BackEndController
             $sellertoo = '';
         }
 
-        if(!isset($changes[0]) && !($changed)){
-            # No Access changed or Brand Inform remains to be changed
-            $data['status'] = 'No Brand detail changes have being done. ';
+        if(!isset($changes[0])){
+            if(!($changed)){
+                if($status == ''){
+                    # No Access changed or Brand Inform remains to be changed
+                    $status = 'No brand detail change have being done. ';
+                }
+
+                $data = [
+                    'brandid' => $brandData['BrandID'],
+                    'brand' => $brandData['Name'],
+                    'summary' => $brandData['Summary'],
+                    'description' => $brandData['Description'],
+                    'button' => 'Modify',
+                    'url' => 'supplier-plateform/brands/owned/brand-editing', 
+                    'sellertoo' => $sellertoo,
+                    'status' => $status,
+                ];
+
+                return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
+            }
         }else{
             # Brand changing controller
             $changed = $this->changingBrandDetails($changes, $brandData);
         }
 
-        if(!($changed)){
-            # returning Data if modification was not approved
-            $data = [
-                'brandid' => $brandData['BrandID'],
-                'brand' => $brandData['Name'],
-                'summary' => $brandData['Summary'],
-                'description' => $brandData['Description'],
-                'button' => 'Modify',
-                'url' => 'brand-editing', 
-                'sellertoo' => $sellertoo,
-            ];
-    
-            return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
+        return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'));
+    }
+
+    public function expireBrand($brandID)
+    {
+        $expire = true;
+        $relationships = $this->relationshipwiseBrandAccessDetails($brandID,'Count-Only');
+
+        if(($relationships['requested'] + $relationships['validated']) > 0){
+            $expire = false;
         }
-            
-        return redirect()->to(base_url('company-brands'));
+
+        $this->setBrandStatusviaID($brandID, 'E');
+
+        return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'));
     }
+
     
-    public function changeBrand($brand_accessID)
+    public function mapBrandAccess()
     {
+        $sessionActive = $this->sessionValidate();
+        if (!$sessionActive) {
+            # returning to Login
+            return redirect()->to(base_url('login'));
+        }
+
+        $current_brand_access = $this->companyAccessBrandNames($_SESSION['CorpID']);
+        $non_access_brands = $this->exclusionBrands($current_brand_access);
+
+        $data['brand_list'] = $non_access_brands;
+
+        return view('SupplierPlateform/Brand-Management/mapBrandAccess',$data);
+    }
+
+    public function mapNewAccess()
+    {
+        $brand_access = [
+            'BrandID' => $this->request->getPost('brandid'),
+            'CorparationID' => $_SESSION['CorpID'],
+        ];
+
+        $this->addBrand_AccessData($brand_access);
+
+        return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'));
+
+    }
+
+    public function viewBrandDetail()
+    {
+        $BrandID = $this->request->getPost('brandid');
+
+        // $brand['brandID'] = $BrandID;
+        $brand_info = $this->getBrandDataviaID($BrandID);
+
+        echo json_encode($brand_info[0]);
+        exit;
 
     }
     
-    public function expireBrand($brand_accessID)
+    public function expireBrandAccess($brand_accessID)
     {
-
-        return $this->companyBrandStsChg($brand_accessID);
-        // return redirect()->to(base_url('brand-manager'));
+        return $this->companyBrandAccessStsChg($brand_accessID,'E');
+        // return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'));
     }
 }
 
