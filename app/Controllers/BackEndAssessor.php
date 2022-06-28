@@ -40,7 +40,7 @@ class BackEndAssessor extends BackEndController
         $this->sessionSupplier($data['User'][0]['UserID'],$data['User'][0]['Corparation'][0]['CorparationID']);
         
         # calling Supplier
-        return redirect()->to(base_url('supplier'));
+        return redirect()->to(base_url('supplier-plateform'));
     }
     
     public function loginView()
@@ -48,7 +48,7 @@ class BackEndAssessor extends BackEndController
         $sessionActive = $this->sessionValidate();
         if ($sessionActive) {
             # returning to Supplier
-            return redirect()->to(base_url('supplier'));
+            return redirect()->to(base_url('supplier-plateform'));
         }
         return view('SupplierPlateform/loginScreen');
     }
