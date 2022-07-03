@@ -92,7 +92,7 @@ class BackEndController extends AccessController
         return $owned_brands;
     }
 
-    # Company Brand Status Changing 
+    # Brand Access Changing status
     public function companyBrandAccessStsChg($brand_accessID, $status = 'E')
     {
         # getting the wordings of the Status
