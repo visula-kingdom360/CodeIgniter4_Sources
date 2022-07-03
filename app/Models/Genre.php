@@ -19,6 +19,15 @@
             'ParentID',
         ];
 
+        public function selectGenrebyID($GenreID)
+        {
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->primaryKey[0] => $GenreID]);
+            $data = $query->get()->getResult();
+
+            return $data;
+        }
+        
         public function selectGenrebyParentID($ParentID, $limit)
         {
             $blueprint = $this->db->table($this->table);

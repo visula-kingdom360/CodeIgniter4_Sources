@@ -26,10 +26,10 @@
             'GenreID',
         ];
 
-        public function selectEquipmentsbyBrnadID($Brand_AccessID, $limit = 99, $status = 'A')
+        public function selectEquipmentsbyBrnadID($brand_accessID, $limit = 99, $status = 'A')
         {
             $blueprint = $this->db->table($this->table);
-            $query = $blueprint->where([$this->foreignKeys[1] => $Brand_AccessID]);
+            $query = $blueprint->where([$this->foreignKeys[1] => $brand_accessID]);
             $query = $blueprint->where([$this->allowedFields[3] => $status]);
             $query = $blueprint->limit($limit);
             $data = $query->get()->getResult();
@@ -42,6 +42,17 @@
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->primaryKey[0] => $equipmentID]);
             $query = $blueprint->where([$this->allowedFields[3] => $status]);
+            $data = $query->get()->getResult();
+
+            return $data;
+        }
+
+        public function selectEquipmentsbyCorparationID($corparationID, $limit = 99, $status = 'A')
+        {
+            $blueprint = $this->db->table($this->table);
+            $query = $blueprint->where([$this->foreignKeys[0] => $corparationID]);
+            $query = $blueprint->where([$this->allowedFields[3] => $status]);
+            $query = $blueprint->limit($limit);
             $data = $query->get()->getResult();
 
             return $data;

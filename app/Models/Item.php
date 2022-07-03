@@ -15,7 +15,7 @@
             'EquipmentID',
         ];
 
-        public function selectItembyEquipmentID($EquipmentID, $limit = 99, $status = 'A')
+        public function selectItembyEquipmentID($EquipmentID, $limit = 5, $status = 'A')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->foreignKeys[0] => $EquipmentID]);

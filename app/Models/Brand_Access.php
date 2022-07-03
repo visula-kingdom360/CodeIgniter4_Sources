@@ -42,7 +42,7 @@
             return $data;
         }
 
-        public function selectBrand_AccessbyID($brand_accessID, $status = 'E')
+        public function selectBrand_AccessbyIDandStatus($brand_accessID, $status = 'E')
         {
             $blueprint = $this->db->table($this->table);
             $query = $blueprint->where([$this->primaryKey[0] => $brand_accessID]);

@@ -133,7 +133,7 @@ trait BrandTrait {
         return  $this->brand_access;
     }
 
-    # gathering the Brand Access detail via Corparate ID method from DB
+    # gathering the Brand Access details via Corparate ID method from DB
     public function getBrand_AccessDatafromCorparationID($corparationID)
     {
         $brand_accessModule = new Brand_Access();
@@ -147,6 +147,7 @@ trait BrandTrait {
         return  $this->brand_access;
     }
 
+    # adding Brand Access data via Brand array
     public function addBrand_AccessData($brand_access)
     {
         $brand_accessModule = new Brand_Access();
@@ -161,6 +162,7 @@ trait BrandTrait {
         }
     }
 
+    # gathering the Brand Access detail via Brand ID, Corparate ID and Status method from DB
     public function getBrand_AccessDataviaBrandIDCorpID($brandID, $corparationID, $status = 'E')
     {
         $brand_accessModule = new Brand_Access();
@@ -178,6 +180,7 @@ trait BrandTrait {
         }
     }
 
+    # gathering the Brand Access detail via Brand ID and Relationship method from DB
     public function getBrand_AccessviaBrandIDandRelationship($brandID, $relationship)
     {
         $brand_accessModule = new Brand_Access();
@@ -191,6 +194,21 @@ trait BrandTrait {
         return $this->brand_access;
     }
 
+    # gathering the Brand Access detail via Brand Access ID and Status method from DB
+    public function getBrand_AccessviaBrand_AccessIDandStatus($brand_accessID, $status = 'E')
+    {
+        $brand_accessModule = new Brand_Access();
+
+        # Brand Access data from DB directly
+        $brand_accessDBData = $brand_accessModule->selectBrand_AccessbyIDandStatus($brand_accessID, $status);
+
+        # Converting the DB Data to an Array
+        $this->brand_access = $this->pushModelDBDataToArrayReturn($brand_accessModule, $brand_accessDBData);
+
+        return $this->brand_access;
+    }
+
+    # modification of the Brand Access detail via Brand Access ID and Status method from DB
     public function setBrand_AccessStatusviaBrandID($brand_accessID, $status)
     {
         $brand_accessModule = new Brand_Access();

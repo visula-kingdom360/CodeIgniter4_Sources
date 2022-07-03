@@ -65,7 +65,8 @@ class BackEndAssessor extends BackEndController
         return view('SupplierPlateform/supplierMenu');
     }
 
-    # Accesses Brand Manager
+    ################## BRAND MANAGER ##################
+    # Accesses Brand Manager Screen
     public function brandManager()
     {
         $data = [];
@@ -171,7 +172,7 @@ class BackEndAssessor extends BackEndController
         
     }
 
-    # Adding New Brand's
+    # New Brand Screen
     public function newBrand()
     {
         $sessionActive = $this->sessionValidate();
@@ -261,7 +262,7 @@ class BackEndAssessor extends BackEndController
         return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'))->with('success',$status);
     }
 
-    # Modification 
+    # Brand Modification Screen
     public function modifyBrand($brandID)
     {
         $sessionActive = $this->sessionValidate();
@@ -295,6 +296,7 @@ class BackEndAssessor extends BackEndController
         return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
     }
 
+    # Edition of the Brand
     public function editBrand()
     {
         $changed = false;
@@ -367,6 +369,7 @@ class BackEndAssessor extends BackEndController
         return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'));
     }
 
+    # Expire Brand
     public function expireBrand($brandID)
     {
         $expire = true;
@@ -381,7 +384,7 @@ class BackEndAssessor extends BackEndController
         return redirect()->to(base_url('supplier-plateform/brands/owned/brand-details'));
     }
 
-    
+    # Brand Mapping Screen
     public function mapBrandAccess()
     {
         $sessionActive = $this->sessionValidate();
@@ -398,6 +401,7 @@ class BackEndAssessor extends BackEndController
         return view('SupplierPlateform/Brand-Management/mapBrandAccess',$data);
     }
 
+    # Mapping the New Brand
     public function mapNewAccess()
     {
         $brand_access = [
@@ -411,7 +415,8 @@ class BackEndAssessor extends BackEndController
 
     }
 
-    public function viewBrandDetail()
+    # JS request Brand Detail
+    public function jsBrandDetail()
     {
         $BrandID = $this->request->getPost('brandid');
 
@@ -423,10 +428,48 @@ class BackEndAssessor extends BackEndController
 
     }
     
+    # Expire Brand Access
     public function expireBrandAccess($brand_accessID)
     {
         return $this->companyBrandAccessStsChg($brand_accessID,'E');
         // return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'));
+    }
+
+    ################## BRAND MANAGER ##################
+    # Equipment Detail Screen
+    public function productStorage()
+    {
+        $sessionActive = $this->sessionValidate();
+        if (!$sessionActive) {
+            # returning to Login
+            return redirect()->to(base_url('login'));
+        }
+
+        $corparateID = $_SESSION['CorpID'];
+
+        $equipment = [];
+
+        $equipmentDetails = $this->getEquipmentDataviaCorparationID($corparateID);
+
+        foreach ($equipmentDetails as $row_1_key => $row_1_value) {
+            # loop all equipment details
+            $equipment[$row_1_key]['EquipmentID']   = $row_1_value['EquipmentID'];
+            $equipment[$row_1_key]['Name']          = $row_1_value['Name'];
+            $equipment[$row_1_key]['Highlight']     = $row_1_value['Highlight'];
+            $equipment[$row_1_key]['Rate']          = $row_1_value['Rate'];
+            $equipment[$row_1_key]['Brand']         = $this->access_brandName($row_1_value['Brand_AccessID']);
+            $equipment[$row_1_key]['Count']         = $this->equipmentItemCount($row_1_value['EquipmentID']);
+            $equipment[$row_1_key]['Genre']         = $this->gerneName($row_1_value['GenreID']);
+            $equipment[$row_1_key]['Rental_Sales']  = $row_1_value['Rental_Sales'];
+
+        }
+
+        $data['Equipment'] = $equipment;
+
+        return view('SupplierPlateform/Product-Store/equipmentDetail',$data);
+        // var_dump($equipment);
+        // die;
+        
     }
 }
 

@@ -20,9 +20,9 @@ trait EquipmentTrait {
     public $item_rental = [];
     public $item_detail_types = [];
     public $item_wise_details = [];
+    public $image_files = [];
 
     ##################### E Q U I P M E N T   C R U D #####################
-     # getEquipmentDataviaEquipmentID
     public function getEquipmentDataviaEquipmentID($equipmentID)
     {
         $equipmentModule = new Equipment();
@@ -40,12 +40,25 @@ trait EquipmentTrait {
         }
     }
 
-    public function getEquipmentDataviaBrandID($brand_accessID,$limitedEquips = 99) #getEquipmentDataviaBrandID
+    public function getEquipmentDataviaBrandID($brand_accessID,$limitedEquips = 99)
     {
         $equipmentModule = new Equipment();
         
         # Equipment data from DB directly
         $equipmentDBData = $equipmentModule->selectEquipmentsbyBrnadID($brand_accessID, $limitedEquips);
+
+        # Converting the DB Data to an Array
+        $this->equipment = $this->pushModelDBDataToArrayReturn($equipmentModule, $equipmentDBData);
+
+        return $this->equipment;
+    }
+
+    public function getEquipmentDataviaCorparationID($corparationID, $limitedEquips = 99)
+    {
+        $equipmentModule = new Equipment();
+
+        # Equipment data from DB directly
+        $equipmentDBData = $equipmentModule->selectEquipmentsbyCorparationID($corparationID, $limitedEquips);
 
         # Converting the DB Data to an Array
         $this->equipment = $this->pushModelDBDataToArrayReturn($equipmentModule, $equipmentDBData);
@@ -91,57 +104,55 @@ trait EquipmentTrait {
     //     return  $item;
     // }
 
-    public function getOfferDataviaEquipmentID($equipmentID) #getOfferDataviaEquipmentID
+    ##################### I T E M   C R U D #####################
+    public function getItemDataviaEquipmentID($equipmentID, $limitedItems = 5)
     {
-        $offer = [];
-        $RemainingStocks = 0;
+        $itemModule = new Item();
 
-        $offerModule = new Offer();
-        $offerDBData = $offerModule->selectOfferbyEquipmentID($equipmentID);
+        # Item data from DB directly
+        $itemDBData = $itemModule->selectItembyEquipmentID($equipmentID, $limitedItems);
 
-        foreach ($offerDBData as $row => $feilds) {
-            $offer[$row]['PK'] = $this->autoFeildBreakup($offerModule->primaryKey, $feilds);
-            $offer[$row]['SK'] = $this->autoFeildBreakup($offerModule->allowedFields, $feilds);
-        }
-        return  $offer;
+        # Converting the DB Data to an Array
+        $this->item = $this->pushModelDBDataToArrayReturn($itemModule, $itemDBData);
+
+        return $this->item;
     }
 
-    ##################### I T E M   C R U D #####################
     ##################### S T O C K S   C R U D #####################
     public function getStockDataviaItemID($ItemID) #getStockDataviaItemID
     {
-        $stocks = [];
-
         $stocksModule = new Stocks();
+
+        # Stocks data from DB directly
         $stocksDBData = $stocksModule->selectStocksbyItemID($ItemID);
 
-        foreach ($stocksDBData as $row => $feilds) {
-            # Stock data from DB directly
-            $stocks[$row]['PK'] = $this->autoFeildBreakup($stocksModule->primaryKey, $feilds);
-            $stocks[$row]['SK'] = $this->autoFeildBreakup($stocksModule->allowedFields, $feilds);
-        }
+        # Converting the DB Data to an Array
+        $this->stocks = $this->pushModelDBDataToArrayReturn($stocksModule, $stocksDBData);
             
-        return  $stocks;
+        return  $this->stocks;
     }
 
     ##################### I T E M   S A L E   C R U D #####################
     public function getItem_SaleDataviaItemID($ItemID) #getItem_SaleDataviaItemID
     {
-        $sale = [];
-
         $saleModule = new Item_Sale();
+
+        # Item's Sale data from DB directly
         $saleDBData = $saleModule->selectItem_SalebyItemID($ItemID);
 
-        foreach ($saleDBData as $row => $feilds) {
-            # Item Sale data from DB directly
-            $sale[$row]['PK'] = $this->autoFeildBreakup($saleModule->primaryKey, $feilds);
-            $sale[$row]['SK'] = $this->autoFeildBreakup($saleModule->allowedFields, $feilds);
-            // number_format($number, 2, '.', '')
-            $sale[$row]['SK']['SalesPrice'] = number_format(($feilds->{'Price'} - $feilds->{'InternalDiscount'}),2, '.', '');
-            // $sale[$row]['SK']['SalesPrice'] += ($sale[$row]['SK']['Price'] - $sale[$row]['SK']['InternalDiscount']);
-        }
+        // foreach ($saleDBData as $row => $feilds) {
+        //     # Item Sale data from DB directly
+        //     $sale[$row]['PK'] = $this->autoFeildBreakup($saleModule->primaryKey, $feilds);
+        //     $sale[$row]['SK'] = $this->autoFeildBreakup($saleModule->allowedFields, $feilds);
+        //     // number_format($number, 2, '.', '')
+        //     $sale[$row]['SK']['SalesPrice'] = number_format(($feilds->{'Price'} - $feilds->{'InternalDiscount'}),2, '.', '');
+        //     // $sale[$row]['SK']['SalesPrice'] += ($sale[$row]['SK']['Price'] - $sale[$row]['SK']['InternalDiscount']);
+        // }
 
-        return  $sale;
+        # Converting the DB Data to an Array
+        $this->item_sale = $this->pushModelDBDataToArrayReturn($saleModule, $saleDBData);
+        
+        return  $this->item_sale;
     }
 
     ##################### I T E M   R E N T A L   C R U D #####################
@@ -150,33 +161,41 @@ trait EquipmentTrait {
         $rental = [];
 
         $rentalModule = new Item_Rental();
+        
+        # Item's Rental data from DB directly
         $rentalDBData = $rentalModule->selectItem_RentalbyItemID($ItemID);
 
-        foreach ($rentalDBData as $row => $feilds) {
-            # Item Rental data from DB directly
-            $rental[$row]['PK'] = $this->autoFeildBreakup($rentalModule->primaryKey, $feilds);
-            $rental[$row]['SK'] = $this->autoFeildBreakup($rentalModule->allowedFields, $feilds);
-            $rental[$row]['SK']['Preiod'] = $this->periodType($feilds->{'PreiodType'});
-        }
+        // foreach ($rentalDBData as $row => $feilds) {
+        //     # Item Rental data from DB directly
+        //     $rental[$row]['PK'] = $this->autoFeildBreakup($rentalModule->primaryKey, $feilds);
+        //     $rental[$row]['SK'] = $this->autoFeildBreakup($rentalModule->allowedFields, $feilds);
+        //     $rental[$row]['SK']['Preiod'] = $this->periodType($feilds->{'PreiodType'});
+        // }
             
-        return  $rental;
+        # Converting the DB Data to an Array
+        $this->item_rental = $this->pushModelDBDataToArrayReturn($rentalModule, $rentalDBData);
+        
+        return  $this->item_rental;
     }
 
     ##################### I T E M   D E T A I L   T Y P E S   C R U D #####################
     public function getItem_Detail_TypesDataviaItemID($ItemID) #getItem_Detail_TypesDataviaItemID
     {
-        $item_detail_types = [];
-
         $item_detail_typesModule = new Item_Detail_Types();
+
+        # Item Detail Types data from DB directly
         $item_detail_typesDBData = $item_detail_typesModule->selectItem_Detail_TypesbyItemID($ItemID, $this->limitedCategs);
 
-        foreach ($item_detail_typesDBData as $row => $feilds) {
-            # Category data from DB directly
-            $item_detail_types[$row]['PK'] = $this->autoFeildBreakup($item_detail_typesModule->primaryKey, $feilds);
-            $item_detail_types[$row]['SK'] = $this->autoFeildBreakup($item_detail_typesModule->allowedFields, $feilds);
-        }
+        // foreach ($item_detail_typesDBData as $row => $feilds) {
+        //     # Category data from DB directly
+        //     $item_detail_types[$row]['PK'] = $this->autoFeildBreakup($item_detail_typesModule->primaryKey, $feilds);
+        //     $item_detail_types[$row]['SK'] = $this->autoFeildBreakup($item_detail_typesModule->allowedFields, $feilds);
+        // }
             
-        return  $item_detail_types;
+        # Converting the DB Data to an Array
+        $this->item_detail_types = $this->pushModelDBDataToArrayReturn($item_detail_typesModule, $item_detail_typesDBData);
+        
+        return  $this->item_detail_types;
     }
 
     ##################### I T E M   W I S E   D E T A I L S   C R U D #####################
@@ -186,16 +205,20 @@ trait EquipmentTrait {
         $image = [];
 
         $imageModule = new Image();
+
+        # Images data from DB directly
         $imageDBData = $imageModule->selectImagesbyItemID($ItemID);
 
-        foreach ($imageDBData as $row => $feilds) {
-            # Image data from DB directly
-            $image[$row]['PK'] = $this->autoFeildBreakup($imageModule->primaryKey, $feilds);
-            $image[$row]['SK'] = $this->autoFeildBreakup($imageModule->allowedFields, $feilds);
-        }
+        // foreach ($imageDBData as $row => $feilds) {
+        //     # Image data from DB directly
+        //     $image[$row]['PK'] = $this->autoFeildBreakup($imageModule->primaryKey, $feilds);
+        //     $image[$row]['SK'] = $this->autoFeildBreakup($imageModule->allowedFields, $feilds);
+        // }
             
-        return  $image;
-
+        # Converting the DB Data to an Array
+        $this->image_files = $this->pushModelDBDataToArrayReturn($imageModule, $imageDBData);
+        
+        return  $this->image_files;
     }
 }
 ?>

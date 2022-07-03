@@ -73,7 +73,7 @@ $routes->get('supplier-plateform', 'BackEndAssessor::supplierView');
 
     $routes->get('supplier-plateform/brands/access/brand-details', 'BackEndAssessor::brandManager');
     $routes->get('supplier-plateform/brands/access/map-brand', 'BackEndAssessor::mapBrandAccess');
-    $routes->post('supplier-plateform/brands/access/js-request/brand-detail', 'BackEndAssessor::viewBrandDetail');
+    $routes->post('supplier-plateform/brands/access/js-request/brand-detail', 'BackEndAssessor::jsBrandDetail');
     $routes->post('supplier-plateform/brands/access/add-mapped-brand', 'BackEndAssessor::mapNewAccess');
     $routes->get('supplier-plateform/brands/access/expire-brand/(:num)', 'BackEndAssessor::expireBrandAccess/$1');
     

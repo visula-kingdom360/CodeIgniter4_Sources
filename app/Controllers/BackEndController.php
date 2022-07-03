@@ -5,6 +5,7 @@ class BackEndController extends AccessController
 {
     use Traits\DB\BrandTrait;
     use Traits\DB\EquipmentTrait;
+    use Traits\DB\OtherTrait;
 
     # Company's Brand Name  list gathering method
     public function companyAccessBrandNames($corparationID)
@@ -37,7 +38,7 @@ class BackEndController extends AccessController
         return $all_brands;
     }
 
-    # Companies Brands Using and owned information base
+    # Companies Brands Detail's and Equipment Available for the Brand
     public function companyBrandDetails($corparationID) # Gather Details
     {
         $company_brands = [];
@@ -62,13 +63,12 @@ class BackEndController extends AccessController
             $company_brands[$row_1_key]['Relationship']   = $row_1_value['Relationship'];
 
             $brand_info = [];
-
         }
 
         return $company_brands;
-
     }
 
+    # All Owned Brand Detail's with Relationship with Supplier Access's
     public function ownedBrandDetails($corparationID) # Gather Details
     {
         $owned_brands = [];
@@ -132,7 +132,7 @@ class BackEndController extends AccessController
         return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'))->with('success',$data['status']);
     }
 
-    # Brand Equipment Counting
+    # Count all Equipments in Brnad
     public function brandEquipmentCount($brand_accessID)
     {
         $equipment = $this->getEquipmentDataviaBrandID($brand_accessID);
@@ -203,9 +203,9 @@ class BackEndController extends AccessController
     # Return Brand Name my sending Brand ID
     public function brandName($brandID)
     {
-        $brandDetails = $this->getBrandDataviaID($brandID);
+        $brand = $this->getBrandDataviaID($brandID);
 
-        return $brandDetails[0]['Name'];
+        return $brand[0]['Name'];
     }
 
     # Compare Brand Details with the Datapassed
@@ -270,5 +270,50 @@ class BackEndController extends AccessController
         }
     }
 
+    # 
+    public function access_brandName($brand_accessID)
+    {
+        $brand_access = [];
+
+        $brand_access = $this->getBrand_AccessviaBrand_AccessIDandStatus($brand_accessID);
+
+        return $this->brandName($brand_access[0]['BrandID']);
+    }
+
+    public function gerneName($genreID)
+    {
+        $genre = [];
+        $genre = $this->getGenreDataviaID($genreID);
+
+        return $genre[0]['GenreName'];
+
+    }
+
+    # 
+    // public function all_equipmentsOfCompany($corparateID)
+    // {
+    //     $equipment = [];
+
+    //     $equipmentDetails = $this->getEquipmentDataviaCorparationID($corparateID);
+
+    //     foreach ($equipmentDetails as $row_1_key => $row_1_value) {
+    //         # loop all equipment details
+    //         $equipment['count'][$row_1_key] = $this->totalItemsofEquipment($row_1_value['EquipmentID']);
+    //     }
+
+    //     var_dump($equipment);
+    //     die;
+    // }
+
+    # Count of all Items in Equipment
+    public function equipmentItemCount($equipmentID)
+    {
+        $item = [];
+
+        $item =  $this->getItemDataviaEquipmentID($equipmentID);
+
+        return count($item);
+
+    }
 }
 ?>
