@@ -25,7 +25,7 @@ class BackEndAssessor extends BackEndController
             return redirect()->to(base_url('login'))->with('status',$data['error']);
         }
 
-        #Remember User Information
+        # Remember User Information
         $remember = $this->request->getPost('remember');
         if (isset($remember)) 
         {
@@ -80,6 +80,9 @@ class BackEndAssessor extends BackEndController
 
         $data['company_brands'] = $this->companyBrandDetails($_SESSION["CorpID"]);
         $data['active_equipment_true'] = 'Cannot Expire while active Equipment are available.';
+
+        // var_dump($data);
+        // die;
 
         return view('SupplierPlateform/Brand-Management/brandManager',$data);
     }
@@ -465,6 +468,7 @@ class BackEndAssessor extends BackEndController
         }
 
         $data['Equipment'] = $equipment;
+        $data['active_item_true'] = 'Cannot Expire while active Items are available.';
 
         return view('SupplierPlateform/Product-Store/equipmentDetail',$data);
         // var_dump($equipment);

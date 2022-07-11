@@ -19,7 +19,7 @@ class AccessController extends BlueprintController
             # Access Granted
             return true;
         }
-        #Access Rejected
+        # Access Rejected
         return false;
     }
 

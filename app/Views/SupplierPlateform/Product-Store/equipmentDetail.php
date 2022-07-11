@@ -2,6 +2,7 @@
 <?= $this->section("title") ?> Equipment Management <?= $this->endSection() ?>
 <?= $this->section("access-privilege") ?><li><a href="">User Logged in Information</a></li><?= $this->endSection() ?>
 <?= $this->section("content") ?>
+<script src="<?= base_url('assets/js/equipment-details.js') ?>"></script>
 <div class='container m-5'>
     <div class='row d-flex justify-content-center'>
         <?php
@@ -33,13 +34,19 @@
         <table class='table table-responsive'>
             <thead class='table-dark'>
                 <tr>
-                    <th colspan="4">
-                        <h1>Current Equipment Details</h1>
+                    <th colspan="7">
+                        <h1>Current Equipment Details</h1>                        
                     </th>
-                    <th colspan="3">
-                        
-                        <a href="<?= base_url('supplier-plateform/brands/owned/brand-details') ?>" class="btn btn-primary w-100 my-1">Owned Brands</a>
-                        <a href="<?= base_url('supplier-plateform/brands/access/map-brand') ?>" class="btn btn-secondary w-100 my-1">Map New Brand</a>
+                    <th colspan="2">
+                        <a href="<?= base_url('') ?>" class="btn btn-primary w-100 my-1">Add New Equipments</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="100">
+                        <div class="input-group">
+                            <input type="text" id="equip-search" name="search" class="w-75 form-control" placeholder="Search Equipment">
+                            <button class="equip-search-button btn btn-success w-25">Search</button>
+                        </div>
                     </th>
                 </tr>
                 <tr>
@@ -50,6 +57,8 @@
                     <th>Rate</th>
                     <th>Genre</th>
                     <th>Count</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -62,6 +71,21 @@
                     <td><?= $value['Rate'] ?></td>
                     <td><?= $value['Genre'] ?></td>
                     <td style='text-align: right'><?= $value['Count'] ?></td>
+                    <td class="btn-group">
+                        <a href="<?= base_url('') ?>" class="btn btn-primary w-25 my-1">View Items</a>
+                        <a href="<?= base_url('') ?>" class="btn btn-success w-25 my-1">Modify Equipment</a>                        
+                    </td>
+                    <td>
+                        <?php if ($value['Count'] == 0) { ?>
+                            <a href="<?= base_url('') ?>" class="btn btn-danger my-1">Expire Equipment</a>
+                        <?php }elseif($value['EquipmentID'] != ''){ ?>
+                            <p class='text-secondary'>
+                                <?= $active_item_true ?>
+                            </p>
+                        <?php }else{?>
+                            <p>Issue with the Equipment ID</p>
+                        <?php } ?>
+                    </td>
                 </tr>
                 <?php } ?>
             </tbody>

@@ -8,7 +8,7 @@ $(document).ready(function(){
     $("#brandid").change(function(){
         brand_id = this.value;
         brandDetails(brand_id);
-        console.log(this.value);
+        // console.log(this.value);
     });
 
     function brandDetails(brand_id)
@@ -30,7 +30,6 @@ $(document).ready(function(){
                 console.log(ajaxOptions)
                 console.log(thrownError)
             },
-
         });
     }
 });
