@@ -146,15 +146,41 @@ $routes->get(
 );
 
 ################ Product Store Routers - Sub Sections ################
+#all equipment's information screen
 $routes->get(
     'supplier-plateform/product-store',
     'BackEndAssessor::productStorage'
 );
+
+#equipment searching methodology
 $routes->post(
     'supplier-plateform/product-store/js-request/equipment-search',
     'BackEndAssessor::jsEquipSearch'
 );
 
+#adding a new equipment screen
+$routes->post(
+    'supplier-plateform/product-store/equipment/add-new-equipments',
+    'BackEndAssessor::newEquipment'
+);
+
+#all item's information screen
+$routes->post(
+    'supplier-plateform/product-store/item/(:num)',
+    'BackEndAssessor::itemStorage/$1'
+);
+
+#modify equipment screen
+$routes->post(
+    'supplier-plateform/product-store/equipment/modify-equipments/(:num)',
+    'BackEndAssessor::modifyEquipment/$1'
+);
+
+#expire equipment's
+$routes->post(
+    'supplier-plateform/product-store/equipment/expire-equipments/(:num)',
+    'BackEndAssessor::expireEquipment/$1'
+);
 
 ################ Offer Manager Routers - Sub Sections ################
 $routes->get(

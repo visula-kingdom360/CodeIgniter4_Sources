@@ -7,7 +7,7 @@ class BackEndController extends AccessController
     use Traits\DB\EquipmentTrait;
     use Traits\DB\OtherTrait;
 
-    # Company's Brand Name  list gathering method
+    # Company wise accessing brand Name method
     public function companyAccessBrandNames($corparationID)
     {
         $brand_access_names = [];
@@ -280,6 +280,7 @@ class BackEndController extends AccessController
         return $this->brandName($brand_access[0]['BrandID']);
     }
 
+    # 
     public function gerneName($genreID)
     {
         $genre = [];

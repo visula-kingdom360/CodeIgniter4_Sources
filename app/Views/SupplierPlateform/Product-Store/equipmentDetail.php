@@ -38,7 +38,7 @@
                         <h1>Current Equipment Details</h1>                        
                     </th>
                     <th colspan="2">
-                        <a href="<?= base_url('') ?>" class="btn btn-primary w-100 my-1">Add New Equipments</a>
+                        <a href="<?= base_url('supplier-plateform/product-store/equipment/add-new-equipments') ?>" class="btn btn-primary w-100 my-1">Add New Equipments</a>
                     </th>
                 </tr>
                 <tr>
@@ -72,12 +72,12 @@
                     <td><?= $value['Genre'] ?></td>
                     <td style='text-align: right'><?= $value['Count'] ?></td>
                     <td class="btn-group">
-                        <a href="<?= base_url('') ?>" class="btn btn-primary w-25 my-1">View Items</a>
-                        <a href="<?= base_url('') ?>" class="btn btn-success w-25 my-1">Modify Equipment</a>                        
+                        <a href="<?= base_url('supplier-plateform/product-store/item/'.$value['EquipmentID']) ?>" class="btn btn-primary w-25 my-1">View Items</a>
+                        <a href="<?= base_url('supplier-plateform/product-store/modify-equipments/'.$value['EquipmentID']) ?>" class="btn btn-success w-25 my-1">Modify Equipment</a>                        
                     </td>
                     <td>
                         <?php if ($value['Count'] == 0) { ?>
-                            <a href="<?= base_url('') ?>" class="btn btn-danger my-1">Expire Equipment</a>
+                            <a href="<?= base_url('supplier-plateform/product-store/expire-equipments/'.$value['EquipmentID']) ?>" class="btn btn-danger my-1">Expire Equipment</a>
                         <?php }elseif($value['EquipmentID'] != ''){ ?>
                             <p class='text-secondary'>
                                 <?= $active_item_true ?>

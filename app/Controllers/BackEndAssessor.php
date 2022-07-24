@@ -438,7 +438,7 @@ class BackEndAssessor extends BackEndController
         // return redirect()->to(base_url('supplier-plateform/brands/access/brand-details'));
     }
 
-    ################## BRAND MANAGER ##################
+    ################## EQUIPMENT MANAGER ##################
     # Equipment Detail Screen
     public function productStorage()
     {
@@ -456,14 +456,14 @@ class BackEndAssessor extends BackEndController
 
         foreach ($equipmentDetails as $row_1_key => $row_1_value) {
             # loop all equipment details
-            $equipment[$row_1_key]['EquipmentID']   = $row_1_value['EquipmentID'];
-            $equipment[$row_1_key]['Name']          = $row_1_value['Name'];
-            $equipment[$row_1_key]['Highlight']     = $row_1_value['Highlight'];
-            $equipment[$row_1_key]['Rate']          = $row_1_value['Rate'];
-            $equipment[$row_1_key]['Brand']         = $this->access_brandName($row_1_value['Brand_AccessID']);
-            $equipment[$row_1_key]['Count']         = $this->equipmentItemCount($row_1_value['EquipmentID']);
-            $equipment[$row_1_key]['Genre']         = $this->gerneName($row_1_value['GenreID']);
-            $equipment[$row_1_key]['Rental_Sales']  = $row_1_value['Rental_Sales'];
+            $equipment[$row_1_key]['EquipmentID']  = $row_1_value['EquipmentID'];
+            $equipment[$row_1_key]['Name']         = $row_1_value['Name'];
+            $equipment[$row_1_key]['Highlight']    = $row_1_value['Highlight'];
+            $equipment[$row_1_key]['Rate']         = $row_1_value['Rate'];
+            $equipment[$row_1_key]['Brand']        = $this->access_brandName($row_1_value['Brand_AccessID']);
+            $equipment[$row_1_key]['Count']        = $this->equipmentItemCount($row_1_value['EquipmentID']);
+            $equipment[$row_1_key]['Genre']        = $this->gerneName($row_1_value['GenreID']);
+            $equipment[$row_1_key]['Rental_Sales'] = $row_1_value['Rental_Sales'];
 
         }
 
@@ -474,6 +474,37 @@ class BackEndAssessor extends BackEndController
         // var_dump($equipment);
         // die;
         
+    }
+
+    # Add New Equipment Screen
+    public function newEquipment()
+    {
+        $sessionActive = $this->sessionValidate();
+        if (!$sessionActive) {
+            # returning to Login
+            return redirect()->to(base_url('login'));
+        }
+
+        $corparateID = $_SESSION['CorpID'];
+
+        $brand_access = $this->companyBrandDetails($corparateID);
+
+        $data = [
+            'equipmentid' => '',
+            'name' => '',
+            'highlight' => '',
+            'description' => '',
+            'rental_sales' => '',
+            'rate' => '',
+            'corparationid' => '',
+            'brand_accessid' => '',
+            'genreid' => '',
+            'button' => 'Create',
+            'url' => 'supplier-plateform/brands/owned/brand-creation',
+            'status' => 'A',
+        ];
+
+        return view('SupplierPlateform/Brand-Management/addNewBrand',$data);
     }
 }
 
