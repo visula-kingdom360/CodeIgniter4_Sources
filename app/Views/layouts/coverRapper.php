@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="<?= base_url('assets/css/header.css') ?>">
 </head>
+
 <body>
-    <div class='header-layer .container-fluid'>
+    <div class='header-layer container-fluid'>
         <div class='title-bar row'>
             <div class='logo-section col-md-2'>
                 <a href="<?= base_url('login') ?>">
@@ -44,4 +46,5 @@
     <div class='footer-layer .container-fluid'>
     </div>
 </body>
+
 </html>

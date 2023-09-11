@@ -10,7 +10,7 @@ defined('BASEPATH');
 // use App\Models\Item_Detail_Types;
 // use App\Models\Item_Rental;
 // use App\Models\Item_Sale;
-// use App\Models\Genre;
+use App\Models\Genre;
 // use App\Models\Image;
 // use App\Models\Offer;
 
